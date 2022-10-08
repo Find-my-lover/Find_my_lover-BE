@@ -1,13 +1,12 @@
 
 package com.gamjaring.web.springboot.user;
 
-import com.sun.javafx.beans.IDProperty;
+//import com.sun.javafx.beans.IDProperty;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.management.relation.Role;
 import javax.persistence.*;
 
 @Getter
