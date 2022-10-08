@@ -1,0 +1,13 @@
+#spring:
+#  # 접속 DB 설정
+#  datasource:
+#    url: "jdbc:mariadb://11.3.0.6295:3307/findmylover"
+#    username: "root"
+#    password: "1234"
+#    driver-class-name: "org.mariadb.jdbc.Driver"
+#
+#mybatis:
+#  # mapper 경로 지정
+#  mapper-locations: query/**/*.xml
+#  configuration:
+#    map-underscore-to-camel-case: true
