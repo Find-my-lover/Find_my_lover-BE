@@ -10,9 +10,14 @@ import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 @Configuration
 public class AppConfig {
 
-    @Bean
-    public UserService userService(){
-        return new UserServiceImpl();
-    }
+
+//    @Bean
+//    public UserRepository userRepository(){
+//        return new
+//    }
+//    @Bean
+//    public UserService userService(){
+//        return new UserServiceImpl();
+//    }
 
 }
