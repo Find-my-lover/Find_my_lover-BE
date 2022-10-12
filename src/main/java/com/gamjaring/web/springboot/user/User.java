@@ -40,6 +40,7 @@ public class User{
     @Column(nullable = false)
     private Role role;
 
+
     @Builder
     public User(String name,  String picture,
                 Role role){
