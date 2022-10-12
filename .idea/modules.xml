@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/find_my_lover.iml" filepath="$PROJECT_DIR$/.idea/modules/find_my_lover.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/find_my_lover.main.iml" filepath="$PROJECT_DIR$/.idea/modules/find_my_lover.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/find_my_lover.test.iml" filepath="$PROJECT_DIR$/.idea/modules/find_my_lover.test.iml" />
