@@ -32,7 +32,7 @@ public class UserController {
         user.setName(form.getName());
         user.setPassword(form.getPassword());
         user.setEmail(form.getPassword());
-        user.setGender(form.getGender());
+        //user.setGender(form.getGender());
         userService.createUser(user);
 
         return "redirect:/";

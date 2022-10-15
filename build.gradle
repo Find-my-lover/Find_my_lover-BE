@@ -28,8 +28,6 @@ dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     implementation "org.springframework.boot:spring-boot-starter-thymeleaf:"
 
-//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok:')
@@ -54,6 +52,3 @@ dependencies {
     //implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 }
 
-//test {
-//    useJUnitPlatform()
-//}
