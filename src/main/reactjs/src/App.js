@@ -1,3 +1,7 @@
+import React, {useState, useEffect} from 'react';
+//import logo from './logo.svg';
+//import './App.css';
+
 import Register from './components/Register';
 import Login from './components/Login';
 import Layout from './components/Layout';
@@ -10,6 +14,15 @@ const ROLES = {
 }
 
 function App() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() =>
+  {        fetch('/')
+      .then(response => response.text())
+      .then(message => {
+        setMessage(message);
+      });
+    },[])
 
   return (
     <Routes>
