@@ -52,3 +52,45 @@ dependencies {
     //implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 }
 
+//Springboot프로젝트가 빌드될 때 리액트 프로젝트가
+//먼저 빌드되고, 결과물을 스프링부트 프로젝트 빌드 결과무에 포함한다.
+def frontendDir = "$projectDir/src/main/reactjs"
+
+sourceSets {
+    main {
+        resources { srcDirs = ["$projectDir/src/main/resources"]
+        }
+    }
+}
+
+processResources { dependsOn "copyReactBuildFiles" }
+
+task installReact(type: Exec) {
+    workingDir "$frontendDir"
+    inputs.dir "$frontendDir"
+    group = BasePlugin.BUILD_GROUP
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine "npm.cmd", "audit", "fix"
+        commandLine 'npm.cmd', 'install' }
+    else {
+        commandLine "npm", "audit", "fix" commandLine 'npm', 'install'
+    }
+}
+
+task buildReact(type: Exec) {
+    dependsOn "installReact"
+    workingDir "$frontendDir"
+    inputs.dir "$frontendDir"
+    group = BasePlugin.BUILD_GROUP
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine "npm.cmd", "run-script", "build"
+    } else {
+        commandLine "npm", "run-script", "build"
+    }
+}
+
+task copyReactBuildFiles(type: Copy) {
+    dependsOn "buildReact"
+    from "$frontendDir/build"
+    into "$projectDir/src/main/resources/static"
+}

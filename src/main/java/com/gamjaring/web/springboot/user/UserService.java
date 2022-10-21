@@ -5,7 +5,7 @@ import java.util.List;
 public interface UserService {
     void createUser(User user);
 
-    boolean validationLogin(String email, String password);
+    boolean validationLogin(String name, String password);
 
     void validateDuplicateUser(User user);
     public List<User> findUsers();
