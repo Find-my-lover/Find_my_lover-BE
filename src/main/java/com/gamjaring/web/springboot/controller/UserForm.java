@@ -1,19 +1,12 @@
 package com.gamjaring.web.springboot.controller;
 
 public class UserForm {
+
+
     private String name;
-    private String email;
+    private String password;
+    //private String email;
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    //gender는 binary로 가고 싶은데 방법 고민중
-    private String gender;
 
     public String getName() {
         return name;
@@ -21,14 +14,6 @@ public class UserForm {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getPassword() {
@@ -39,5 +24,26 @@ public class UserForm {
         this.password = password;
     }
 
-    private String password;
+
+//    public String getGender() {
+//        return gender;
+//    }
+//
+//    public void setGender(String gender) {
+//        this.gender = gender;
+//    }
+
+    //gender는 binary로 가고 싶은데 방법 고민중
+    //private String gender;
+
+
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
+
+
 }
