@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axios from "axios";
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -16,13 +17,11 @@ const ROLES = {
 function App() {
   const [message, setMessage] = useState("");
 
-  useEffect(() =>
-  {        fetch('/')
-      .then(response => response.text())
-      .then(message => {
-        setMessage(message);
-      });
-    },[])
+    useEffect(() => {
+        axios.get('/api/home')
+            .then(response => setHome(response.data))
+            .catch(error => console.log(error))
+    }, []);
 
   return (
     <Routes>
