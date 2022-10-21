@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e147100-0cd9-48eb-adf8-ca79ea913f49" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/reactjs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/reactjs/package-lock.json" afterDir="false" />
@@ -46,12 +48,23 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "last_opened_file_path": "C:/Program Files/find_my_lover/src/main/reactjs",
     "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.find_my_lover [dependencies]">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Program Files\find_my_lover\src\main\reactjs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="find_my_lover [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

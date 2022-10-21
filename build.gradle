@@ -62,7 +62,10 @@ sourceSets {
         }
     }
 }
-
+//npm {
+//    download = true
+//    version = "12.18.2"
+//}
 processResources {
     dependsOn "buildReact"
 }
