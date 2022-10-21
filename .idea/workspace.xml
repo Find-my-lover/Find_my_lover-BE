@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e147100-0cd9-48eb-adf8-ca79ea913f49" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/com.gamjaring.web.find_my_lover.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/reactjs/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/reactjs/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="4e147100-0cd9-48eb-adf8-ca79ea913f49" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +37,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
