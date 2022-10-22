@@ -28,10 +28,10 @@ public class UserController {
 
     @PostMapping("/resister")
     public String create(UserForm form){
-        User user=new User();
+        User user=new User(form.getName(), form.getPassword());
         //이래도 되나
-        user.setName(form.getName());
-        user.setPassword(form.getPassword());
+        //user.setName(form.getName());
+        //user.setPassword(form.getPassword());
 //        user.setEmail(form.getPassword());
         //user.setGender(form.getGender());
         userService.createUser(user);
