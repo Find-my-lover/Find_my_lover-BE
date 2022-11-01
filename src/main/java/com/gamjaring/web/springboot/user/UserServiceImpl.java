@@ -31,8 +31,8 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public boolean validationLogin(String email, String password){
-        User loginUser=userRepository.findByEmail(email);
+    public boolean validationLogin(String name, String password){
+        User loginUser=userRepository.findByName(name);
 
         if(loginUser==null){
             System.out.println("해당 이메일로 등록된 유저는 없습니다.");
@@ -53,7 +53,7 @@ public class UserServiceImpl implements UserService{
 
     //private이어야 할지 고민해보기
     public void validateDuplicateUser(User user){
-        if(userRepository.findByEmail(user.getEmail())!=null){
+        if(userRepository.findByName(user.getName())!=null){
             System.out.println("이미 가입이 된 아이디입니다.");
         }
 
@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService{
 
 
     public User findOne(String userMail){
-        return userRepository.findByEmail(userMail);
+        return userRepository.findByName(userMail);
     }
 
 

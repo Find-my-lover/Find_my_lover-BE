@@ -21,21 +21,22 @@ public class UserController {
         this.userService=userService;
     }
 
-    @GetMapping("/users/new")
+    @GetMapping("/resister")
     public String createForm(){
-        return "users/createUserForm";
+        return "/resister";
     }
 
-    @PostMapping("/users/new")
+    @PostMapping("/resister")
     public String create(UserForm form){
-        User user=new User();
-        user.setName(form.getName());
-        user.setPassword(form.getPassword());
-        user.setEmail(form.getPassword());
+        User user=new User(form.getName(), form.getPassword());
+        //이래도 되나
+        //user.setName(form.getName());
+        //user.setPassword(form.getPassword());
+//        user.setEmail(form.getPassword());
         //user.setGender(form.getGender());
         userService.createUser(user);
 
-        return "redirect:/";
+        return "/Login";
     }
 
     @GetMapping("/users")

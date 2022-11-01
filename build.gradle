@@ -29,26 +29,110 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-thymeleaf:"
 
 
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.projectlombok:lombok:')
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
-    compile("com.h2database:h2")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok:')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation("com.h2database:h2")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 
 
     //DB
 
     implementation 'mysql:mysql-connector-java'
-//    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-//    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.0'
-//    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.3.0'
-//    implementation group: 'org.mybatis', name: 'mybatis-typehandlers-jsr310', version: '1.0.2'
-//    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.6'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.0'
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.3.0'
+    implementation group: 'org.mybatis', name: 'mybatis-typehandlers-jsr310', version: '1.0.2'
+    implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.6'
 
 
     //Security
     implementation 'org.springframework.boot:spring-boot-starter-security'
     //implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 }
+def webappDir = "$projectDir/src/main/reactjs"
 
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["$webappDir/build", "$projectDir/src/main/resources"]
+        }
+    }
+}
+//npm {
+//    download = true
+//    version = "12.18.2"
+//}
+processResources {
+    dependsOn "buildReact"
+}
+
+task buildReact(type: Exec) {
+    dependsOn "installReact"
+    workingDir "$webappDir"
+    inputs.dir "$webappDir"
+    group = BasePlugin.BUILD_GROUP
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine "npm.cmd", "run-script", "build"
+    } else {
+        commandLine "npm", "run-script", "build"
+    }
+}
+
+task installReact(type: Exec) {
+    workingDir "$webappDir"
+    inputs.dir "$webappDir"
+    group = BasePlugin.BUILD_GROUP
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine "npm.cmd", "audit", "fix"
+        commandLine 'npm.cmd', 'install'
+    } else {
+        commandLine "npm", "audit", "fix"
+        commandLine 'npm', 'install'
+    }
+}
+
+
+//Springboot프로젝트가 빌드될 때 리액트 프로젝트가
+//먼저 빌드되고, 결과물을 스프링부트 프로젝트 빌드 결과무에 포함한다.
+def frontendDir = "$projectDir/src/main/reactjs"
+
+sourceSets {
+    main {
+        resources { srcDirs = ["$projectDir/src/main/resources"]
+        }
+    }
+}
+
+processResources { dependsOn "copyReactBuildFiles" }
+
+installReact{
+    workingDir "$frontendDir"
+    inputs.dir "$frontendDir"
+    group = BasePlugin.BUILD_GROUP
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine "npm.cmd", "audit", "fix"
+        commandLine 'npm.cmd', 'install' }
+    else {
+        commandLine "npm", "audit", "fix" commandLine 'npm', 'install'
+    }
+}
+
+buildReact{
+    dependsOn "installReact"
+    workingDir "$frontendDir"
+    inputs.dir "$frontendDir"
+    group = BasePlugin.BUILD_GROUP
+    if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+        commandLine "npm.cmd", "run-script", "build"
+    } else {
+        commandLine "npm", "run-script", "build"
+    }
+}
+
+task copyReactBuildFiles(type: Copy) {
+    dependsOn "buildReact"
+    from "$frontendDir/build"
+    into "$projectDir/src/main/resources/static"
+}

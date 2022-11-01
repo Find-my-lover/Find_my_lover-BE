@@ -2,16 +2,14 @@
 package com.gamjaring.web.springboot.user;
 
 //import com.sun.javafx.beans.IDProperty;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name="user")
 @Entity
 public class User{
@@ -26,89 +24,55 @@ public class User{
 
     @Column(nullable=false)
     private String name;
+//
+//    @Column
+//    private String email;
+//
+//    @Column(nullable = false)
+//    private String gender;
 
-    @Column
-    private String email;
+//    @Column
+//    private String picture;
 
-    @Column(nullable = false)
-    private String gender;
+//    @Enumerated(EnumType.STRING)
+//    @Column(nullable = false)
+//    private Role role;
 
-    @Column
-    private String picture;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Role role;
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     @Builder
-    public User(String name,  String picture,
-                Role role){
+    public User(String name, String password){
         this.name=name;
-        this.picture=picture;
-        this.role=role;
+        this.password=password;
     }
 
-    public User update(String name, String picture){
+    public User update(String name, String password){
         this.name=name;
-        this.picture=picture;
-
+        this.password=password;
         return this;
     }
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getPassword() {
-//        return password;
-//    }
-//
-//    public void setPassword(String password) {
-//        this.password = password;
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public String getGender() {
-//        return gender;
-//    }
-//
-//    public void setGender(String gender) {
-//        this.gender = gender;
-//    }
-//
-//    public String getPicture() {
-//        return picture;
-//    }
-//
-//    public void setPicture(String picture) {
-//        this.picture = picture;
-//    }
-//
-//    public Role getRole() {
-//        return role;
-//    }
-//
-//    public void setRole(Role role) {
-//        this.role = role;
-//    }
-//
-//
-//
-
-//    public String getRoleKey(){
-//        return this.role.getKey();
-//    }
 
 }

@@ -1,2 +1,6 @@
 # Project exclude paths
-/.gradle/
+
+
+
+.idea/
+Find_my_lover-FE/
