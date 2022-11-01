@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-=======
+
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
 //import logo from './logo.svg';
 //import './App.css';
 
->>>>>>> origin/yerin
+
 import Register from './components/Register';
 import Login from './components/Login';
 import Layout from './components/Layout';
@@ -18,8 +17,7 @@ const ROLES = {
 }
 
 function App() {
-<<<<<<< HEAD
-=======
+
   const [message, setMessage] = useState("");
 
     useEffect(() => {
@@ -27,7 +25,6 @@ function App() {
             .then(response => setHome(response.data))
             .catch(error => console.log(error))
     }, []);
->>>>>>> origin/yerin
 
   return (
     <Routes>
