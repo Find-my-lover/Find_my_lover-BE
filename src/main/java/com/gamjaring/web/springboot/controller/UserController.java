@@ -43,11 +43,11 @@ public class UserController {
     }
 
     //임시적으로 local host 8080에서 바로 로그인으로 가게 만들어둠.
-    @GetMapping
-    public String root(){
-        return "redirect:/login";
+//    @GetMapping
+//    public String root(){
+//        return "redirect:/login";
 
-    }
+//    }
     @ApiOperation(value="로그인 폼")
     @GetMapping("/login")
     public String loginForm(){

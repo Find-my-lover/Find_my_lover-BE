@@ -1,4 +1,4 @@
-package com.gamjaring.web.springboot.auth;
+/*package com.gamjaring.web.springboot.auth;
 
 import org.apache.catalina.security.SecurityConfig;
 import org.junit.Test;
@@ -43,3 +43,4 @@ public class PasswordEncoderTest {
     }
 
 }
+*/
