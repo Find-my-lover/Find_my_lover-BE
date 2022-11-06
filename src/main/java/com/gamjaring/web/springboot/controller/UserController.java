@@ -46,8 +46,10 @@ public class UserController {
 //    @GetMapping
 //    public String root(){
 //        return "redirect:/login";
-
+//
 //    }
+
+
     @ApiOperation(value="로그인 폼")
     @GetMapping("/login")
     public String loginForm(){
