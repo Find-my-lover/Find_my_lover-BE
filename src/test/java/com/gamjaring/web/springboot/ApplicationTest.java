@@ -1,4 +1,4 @@
-/*package com.gamjaring.web.springboot;
+package com.gamjaring.web.springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,4 +7,3 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class ApplicationTest {
   
 }
-*/
