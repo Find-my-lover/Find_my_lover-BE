@@ -10,6 +10,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+//api취급 판별기 class
 @Configuration
 @EnableSwagger2
 public class Swagger2Config{
@@ -19,7 +20,7 @@ public class Swagger2Config{
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 //.apis(RequestHandlerSelectors.basePackage(""))
-        //문제시 패키지 명 지정해주기
+                //문제시 패키지 명 지정해주기
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());

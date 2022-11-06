@@ -21,7 +21,7 @@ import java.util.List;
 //@Tag(name="signup", description="회원가입 API")
 //@RequestMapping("/api/signup")
 @Api(tags={"User"})
-@RestController
+@RestController //REST API용 컨트롤러?
 public class UserController {
 //    @Operation(summary = "get forms", description = "사용자의 회원가입 정보를 가져오기")
 //    @ApiResponses(value = {
@@ -43,11 +43,13 @@ public class UserController {
     }
 
     //임시적으로 local host 8080에서 바로 로그인으로 가게 만들어둠.
-    @GetMapping
-    public String root(){
-        return "redirect:/login";
+//    @GetMapping
+//    public String root(){
+//        return "redirect:/login";
+//
+//    }
 
-    }
+
     @ApiOperation(value="로그인 폼")
     @GetMapping("/login")
     public String loginForm(){
