@@ -6,4 +6,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="--warning-mode=all --stacktrace" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="--warining-mode=all --stacktrack" />
+  </component>
 </project>
