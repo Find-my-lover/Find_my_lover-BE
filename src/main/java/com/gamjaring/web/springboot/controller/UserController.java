@@ -2,19 +2,13 @@ package com.gamjaring.web.springboot.controller;
 
 
 import com.gamjaring.web.springboot.user.User;
-import com.gamjaring.web.springboot.user.UserRepository;
 import com.gamjaring.web.springboot.user.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -61,11 +55,30 @@ public class UserController {
         return "/resister";
     }
 
+    @ApiOperation(value="초기화면-성별선택 및 이미지 넣기")
+    @PostMapping("/main/select")
+    public String initialSelect(@RequestBody UserForm userForm) {
+        User user = new User(userForm.getName());
+        user.setGender(userForm.isGender());
+        user.setImage(userForm.getImage());
+        userService.createUser(user);
+        return "redirect:/main/loading";
+    }
+
+    @ApiOperation(value="로딩(뒤에서 인공지능 돌아가므로 임의로 넣어둠)")
+    @PostMapping("/main/loading")
+    public String loading(UserForm form) {
+        User user = new User(form.getName());
+        user.setGender(form.isGender());
+        user.setImage(form.getImage());
+        userService.createUser(user);
+        return "/main/loading";
+    }
 
     @ApiOperation(value="유저 회원가입 등록")
     @PostMapping("/resister")
     public String create(UserForm form){
-        User user=new User(form.getName(), form.getPassword());
+        User user=new User(form.getName());
         //이래도 되나
         //user.setName(form.getName());
         //user.setPassword(form.getPassword());

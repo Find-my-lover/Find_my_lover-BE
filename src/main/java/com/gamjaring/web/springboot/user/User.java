@@ -24,15 +24,17 @@ public class User{
 
     @Column(nullable=false)
     private String name;
-//
-//    @Column
-//    private String email;
-//
-//    @Column(nullable = false)
-//    private String gender;
 
-//    @Column
-//    private String picture;
+    @Column
+    private String email;
+
+
+
+    @Column//(nullable = false)
+    private boolean gender;
+
+    @Column
+    private String image;
 
 //    @Enumerated(EnumType.STRING)
 //    @Column(nullable = false)
@@ -64,7 +66,7 @@ public class User{
     }
 
     @Builder
-    public User(String name, String password){
+    public User(String name){
         this.name=name;
         this.password=password;
     }
@@ -74,5 +76,18 @@ public class User{
         this.password=password;
         return this;
     }
+    public boolean isGender() {
+        return gender;
+    }
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }
