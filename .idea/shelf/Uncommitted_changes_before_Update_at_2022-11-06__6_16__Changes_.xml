@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_2022-11-06_오후_6_16_[Changes]" date="1667726212081" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06_오후_6_16_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022-11-06 오후 6:16 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="build/test-results/test/binary/output.bin.idx" />
+    <option name="AFTER_PATH" value="build/test-results/test/binary/output.bin.idx" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06_오후_6_16_[Changes]/output.bin.idx" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/test-results/test/binary/output.bin" />
+    <option name="AFTER_PATH" value="build/test-results/test/binary/output.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06_오후_6_16_[Changes]/output.bin" />
+  </binary>
+</changelist>
