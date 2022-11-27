@@ -5,123 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67fd2572-4ab9-4d12-9b24-bd7f9e7d0c5e" name="Changes" comment="재 정정">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22__2_37__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22_오전_2_37_[Changes]/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22_오전_2_37_[Changes]/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/config/Swagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/friendedit/FriendService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/friendedit/Friendedit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/friendedit/FriendeditRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/friendedit/Imgfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/friendedit/ImgfileDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/friendedit/ImgfileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/gc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22_오전_2_37_[Changes]/shelved.patch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22_오전_2_37_[Changes]/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.4.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/find_my_lover.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/find_my_lover.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/find_my_lover.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/find_my_lover.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__3_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__3_56__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__3_56__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__3_56__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06__6_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06__6_16__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06__6_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06__6_43__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Find_my_lover-BE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/gamjaring/web/springboot/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/gamjaring/web/springboot/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/gamjaring/web/springboot/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/gamjaring/web/springboot/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/config/env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/config/jest/cssTransform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/config/jest/fileTransform.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/config/paths.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/config/polyfills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/config/webpack.config.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/config/webpack.config.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/config/webpackDevServer.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/node_modules/.package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/scripts/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/scripts/start.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/scripts/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/api/axios.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/components/Layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/components/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/components/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/context/AuthProvider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/hooks/useAuth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/hooks/useAxiosPrivate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/hooks/useInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/hooks/useLocalStorage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/hooks/useLogout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/hooks/useRefreshToken.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/hooks/useToggle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/setProxy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/reactjs/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/front_end/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/ApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/auth/PasswordEncoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/auth/PasswordEncoderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,37 +81,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/taehyeonkim/Desktop/캡스톤/Backend/SSU_Rental/build.gradle&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;c6174cdd75283f13efbc6c7c5c2e4ae3&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/taehyeonkim/Desktop/캡스톤/Backend/SSU_Rental/build.gradle",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "c6174cdd75283f13efbc6c7c5c2e4ae3"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\taehyeonkim\Desktop\애인상 플젝\untitled\src\main\resources\templates" />
       <recent name="C:\Users\taehyeonkim\Desktop\애인상 플젝\untitled\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application (1)">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="find_my_lover [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -269,7 +154,8 @@
       </method>
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="com.gamjaring.web.find_my_lover.main" />
+      <option name="ACTIVE_PROFILES" />
+      <module name="find_my_lover.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gamjaring.web.springboot.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -327,6 +213,7 @@
       <workItem from="1669533069073" duration="301000" />
       <workItem from="1669533410741" duration="48000" />
       <workItem from="1669533475342" duration="231000" />
+      <workItem from="1669533744618" duration="289000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1668230056849</created>
