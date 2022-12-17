@@ -1,28 +1,21 @@
-package com.gamjaring.web.springboot.controller;
+//DTO다.
+//계층 간의 데이터 교환을 담당하는 객체이다.
+package com.gamjaring.web.springboot.user;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class UserForm {
 
 
     private String name;
+
+    private String email;
+
     private String password;
     //private String email;
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
 
 //    public String getGender() {

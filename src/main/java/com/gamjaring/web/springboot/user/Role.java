@@ -1,4 +1,6 @@
-//package com.gamjaring.web.springboot.user;
+//관리자가 필요해지면 사용하기
+
+
 //
 //import lombok.Getter;
 //import lombok.RequiredArgsConstructor;
@@ -12,5 +14,4 @@
 //    private final String key;
 //    private final String title;
 //}
-
 

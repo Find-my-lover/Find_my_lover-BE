@@ -19,6 +19,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
+    //http요청에 대한 보안을 설정한다.
+    //페이지 권한, 로그인 페이지, 로그아웃 메서드 등에 대한 설정을 작성한다.
+
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http.cors().disable()
