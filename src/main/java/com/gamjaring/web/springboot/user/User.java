@@ -12,22 +12,19 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name="user")
 @Entity
 public class User{
 
 
     @Id
-    @Column(name="user_id")
+    //@Column(name="user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+
     private String password;
 
-    @Column(nullable = false)
     private String name;
 
     @Column(unique = true)

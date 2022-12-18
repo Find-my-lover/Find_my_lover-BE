@@ -3,7 +3,7 @@ package com.gamjaring.web.springboot.user;
 import java.util.List;
 
 public interface UserService {
-    void createUser(User user);
+    User createUser(User user);
 
     boolean validationLogin(String name, String password);
 

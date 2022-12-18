@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @CrossOrigin("*")
+//    @CrossOrigin("*")
     @GetMapping("/")
     public String home(){
-        return "register";
+        return "home";
     }
 }

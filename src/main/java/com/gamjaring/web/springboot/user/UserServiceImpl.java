@@ -2,37 +2,40 @@
 
 package com.gamjaring.web.springboot.user;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Transactional//로직을 처리하다가 에러가 발생하면 변경된 데이터를 로직을 수행하기 이전 상태로 롤백해줘야 된다.
 public class UserServiceImpl implements UserService{
 
     @Autowired
     private final UserRepository userRepository;
 
-
-    public UserServiceImpl(UserRepository userRepository){
-        this.userRepository=userRepository;
-    }
-
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+
+    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder){
+        this.userRepository=userRepository;
+        this.passwordEncoder=passwordEncoder;
+    }
+
     @Override
-    public void createUser(User user){
-        String encodedPassword=passwordEncoder.encode(user.getPassword());
-        user.setPassword(encodedPassword);
-        userRepository.save(user);
+    public User createUser(User user){
+        validateDuplicateUser(user);
+        return userRepository.save(user);
     }
 
     @Override
     public boolean validationLogin(String name, String password){
-        User loginUser=userRepository.findByName(name);
+        User loginUser=userRepository.findByEmail(name);
 
         if(loginUser==null){
             System.out.println("해당 이메일로 등록된 유저는 없습니다.");
@@ -52,9 +55,10 @@ public class UserServiceImpl implements UserService{
 
 
     //private이어야 할지 고민해보기
+    //중복 이메일로 회원가입 시도하면 예외 발생
     public void validateDuplicateUser(User user){
-        if(userRepository.findByName(user.getName())!=null){
-            System.out.println("이미 가입이 된 아이디입니다.");
+        if(userRepository.findByEmail(user.getEmail())!=null){
+            throw new IllegalStateException("이미 가입이 된 아이디입니다.");
         }
 
     }
@@ -64,9 +68,9 @@ public class UserServiceImpl implements UserService{
     }
 
 
-    public User findOne(String userMail){
-        return userRepository.findByName(userMail);
+/*    public User findOne(String userMail){
+        return userRepository.findByEmail(userMail);
     }
-
+*/
 
 }
