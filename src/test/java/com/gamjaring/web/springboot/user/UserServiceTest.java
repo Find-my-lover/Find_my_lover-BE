@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.test.context.TestPropertySource;
 
 import javax.transaction.Transactional;
 
@@ -22,19 +21,19 @@ public class UserServiceTest {
     @Autowired
     PasswordEncoder passwordEncoder;
 
-    public User createUser(){
+    public Member createUser(){
         UserForm userForm=new UserForm();
         userForm.setEmail("yerinyoon@ewhain.net");
         userForm.setName("예린");
         userForm.setPassword("12345");
-        return User.createUser(userForm, passwordEncoder);
+        return Member.createUser(userForm, passwordEncoder);
     }
 
     @Test
     @DisplayName("회원 가입 테스트")
     public void saveUserTest(){
-        User user=createUser();
-        User savedUser=userService.createUser(user);
+        Member user=createUser();
+        Member savedUser=userService.createUser(user);
 
         assertEquals(user.getEmail(), savedUser.getEmail());
         assertEquals(user.getName(), savedUser.getName());
@@ -45,8 +44,8 @@ public class UserServiceTest {
     @Test
     @DisplayName("중복 회원가입 테스트")
     public void saveDuplicateMemberTest(){
-        User user1=createUser();
-        User user2=createUser();
+        Member user1=createUser();
+        Member user2=createUser();
         userService.createUser(user1);
 
         Throwable e =assertThrows(IllegalStateException.class, ()->{

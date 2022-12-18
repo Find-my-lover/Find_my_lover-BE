@@ -4,13 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="67fd2572-4ab9-4d12-9b24-bd7f9e7d0c5e" name="Changes" comment="">
-=======
-    <list default="true" id="67fd2572-4ab9-4d12-9b24-bd7f9e7d0c5e" name="Changes" comment="재 정정">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
->>>>>>> b3feb1ca1d4ba43adbca444c37cf557a6215806d
+    <list default="true" id="6c6bbf97-3133-4093-ab58-25b88d8c33c8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/find_my_lover.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/find_my_lover.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/find_my_lover.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/find_my_lover.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22__2_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-22__2_37__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__3_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-11-27__3_56__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06__6_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06__6_16__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06__6_43__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-11-06__6_43__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/config/auth/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/config/auth/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/user/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/user/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/user/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/user/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/user/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/gamjaring/web/springboot/user/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/config/auth/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/config/auth/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/user/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gamjaring/web/springboot/user/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/user/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/user/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,44 +71,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-        <entry key="$PROJECT_DIR$/Find_my_lover-BE" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-  </component>
-  <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2FtNyPpd5ith6YNQdXyycfJIMtW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -93,72 +87,85 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/taehyeonkim/Desktop/캡스톤/Backend/SSU_Rental/build.gradle",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "spring.configuration.checksum": "c6174cdd75283f13efbc6c7c5c2e4ae3"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\taehyeonkim\Desktop\애인상 플젝\untitled\src\main\resources\templates" />
-      <recent name="C:\Users\taehyeonkim\Desktop\애인상 플젝\untitled\src\main\resources" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.Application">
-    <configuration name="find_my_lover [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="JUnit.UserControllerTest.loginSuccessTest">
+    <configuration name="UserServiceTest.saveUserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="dependencies" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.gamjaring.web.springboot.user.UserServiceTest.saveUserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="untitled" />
+    <configuration name="UserControllerTest.loginSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="find_my_lover.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gamjaring.web.springboot.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gamjaring.web.springboot.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.gamjaring.web.springboot.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="loginSuccessTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="untitled" />
-      <option name="filePath" />
+    <configuration name="UserServiceTest.saveDuplicateMemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="find_my_lover.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gamjaring.web.springboot.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gamjaring.web.springboot.user" />
+      <option name="MAIN_CLASS_NAME" value="com.gamjaring.web.springboot.user.UserServiceTest" />
+      <option name="METHOD_NAME" value="saveDuplicateMemberTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="find_my_lover.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gamjaring.web.springboot.Application" />
+    <configuration name="UserServiceTest.saveUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="find_my_lover.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gamjaring.web.springboot.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gamjaring.web.springboot.user" />
+      <option name="MAIN_CLASS_NAME" value="com.gamjaring.web.springboot.user.UserServiceTest" />
+      <option name="METHOD_NAME" value="saveUserTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" />
       <module name="find_my_lover.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gamjaring.web.springboot.Application" />
       <method v="2">
@@ -167,79 +174,23 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.find_my_lover [dependencies]" />
-        <item itemvalue="Gradle.find_my_lover [dependencies]" />
+        <item itemvalue="JUnit.UserControllerTest.loginSuccessTest" />
+        <item itemvalue="JUnit.UserServiceTest.saveDuplicateMemberTest" />
+        <item itemvalue="JUnit.UserServiceTest.saveUserTest" />
+        <item itemvalue="Gradle.UserServiceTest.saveUserTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="67fd2572-4ab9-4d12-9b24-bd7f9e7d0c5e" name="Changes" comment="" />
-      <created>1665307677276</created>
+      <changelist id="6c6bbf97-3133-4093-ab58-25b88d8c33c8" name="Changes" comment="" />
+      <created>1671342193823</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1665307677276</updated>
-      <workItem from="1665307678468" duration="1988000" />
-      <workItem from="1665404687355" duration="107000" />
-      <workItem from="1665415582080" duration="709000" />
-      <workItem from="1665416304917" duration="10000" />
-      <workItem from="1665416334337" duration="3360000" />
-      <workItem from="1665463072942" duration="2328000" />
-      <workItem from="1665472231342" duration="1928000" />
-      <workItem from="1665475369515" duration="53000" />
-      <workItem from="1665475437383" duration="58000" />
-      <workItem from="1665585665143" duration="3704000" />
-      <workItem from="1665590928807" duration="2135000" />
-      <workItem from="1665593075726" duration="290000" />
-      <workItem from="1665675170160" duration="298000" />
-      <workItem from="1665723014591" duration="8000" />
-      <workItem from="1665815786890" duration="2544000" />
-      <workItem from="1665818351676" duration="1381000" />
-      <workItem from="1666371397480" duration="69000" />
-      <workItem from="1666371504402" duration="46000" />
-      <workItem from="1666371931953" duration="8619000" />
-      <workItem from="1666421887640" duration="6873000" />
-      <workItem from="1666859259592" duration="1715000" />
-      <workItem from="1667111050997" duration="2391000" />
-      <workItem from="1667311760450" duration="3667000" />
-      <workItem from="1667544686128" duration="8483000" />
-      <workItem from="1667707352353" duration="7446000" />
-<<<<<<< HEAD
-      <workItem from="1667829464396" duration="22000" />
-      <workItem from="1667985788901" duration="40000" />
-      <workItem from="1668324666518" duration="3822000" />
-=======
-      <workItem from="1667872049406" duration="63000" />
-      <workItem from="1667905721062" duration="601000" />
-      <workItem from="1667910308174" duration="117000" />
-      <workItem from="1668083746130" duration="632000" />
-      <workItem from="1668229377950" duration="2495000" />
-      <workItem from="1668430293257" duration="47000" />
-      <workItem from="1668925606389" duration="647000" />
-      <workItem from="1668931244187" duration="3056000" />
-      <workItem from="1669530973130" duration="1080000" />
-      <workItem from="1669533069073" duration="301000" />
-      <workItem from="1669533410741" duration="48000" />
-      <workItem from="1669533475342" duration="231000" />
-      <workItem from="1669533744618" duration="289000" />
->>>>>>> b3feb1ca1d4ba43adbca444c37cf557a6215806d
+      <updated>1671342193823</updated>
+      <workItem from="1671342194407" duration="17889000" />
     </task>
-    <task id="LOCAL-00001" summary=".">
-      <created>1668230056849</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1668230056849</updated>
-    </task>
-    <task id="LOCAL-00002" summary="재 정정">
-      <created>1668326404231</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1668326404231</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,15 +201,50 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="." />
-    <MESSAGE value="재 정정" />
-    <option name="LAST_COMMIT_MESSAGE" value="재 정정" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/user/UserServiceTest.java</url>
+          <line>34</line>
+          <properties class="com.gamjaring.web.springboot.user.UserServiceTest" method="saveUserTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/gamjaring/web/springboot/controller/UserControllerTest.java</url>
+          <line>47</line>
+          <properties class="com.gamjaring.web.springboot.controller.UserControllerTest" method="loginSuccessTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

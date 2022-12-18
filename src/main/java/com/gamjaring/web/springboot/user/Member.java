@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Setter
 @Table(name="user")
 @Entity
-public class User{
+public class Member {
 
 
     @Id
@@ -31,8 +31,8 @@ public class User{
     private String email;
 
     //user Entity를 이렇게 생성
-    public static User createUser(UserForm userForm, PasswordEncoder passwordEncoder){
-        User user=new User();
+    public static Member createUser(UserForm userForm, PasswordEncoder passwordEncoder){
+        Member user=new Member();
         user.setName(userForm.getName());
         user.setEmail(userForm.getEmail());
 

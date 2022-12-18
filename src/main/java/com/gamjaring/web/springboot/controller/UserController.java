@@ -1,7 +1,7 @@
 package com.gamjaring.web.springboot.controller;
 
 
-import com.gamjaring.web.springboot.user.User;
+import com.gamjaring.web.springboot.user.Member;
 import com.gamjaring.web.springboot.user.UserForm;
 import com.gamjaring.web.springboot.user.UserService;
 import io.swagger.annotations.Api;
@@ -56,7 +56,7 @@ public class UserController {
     @ApiOperation(value="회원가입")
     @PostMapping
     public String userForm(UserForm userForm){
-        User user=User.createUser(userForm, passwordEncoder);
+        Member user= Member.createUser(userForm, passwordEncoder);
         userService.createUser(user);
 
         return "redirect:/";//회원가입 완료
@@ -70,7 +70,7 @@ public class UserController {
             return "users/userForm";
         }
         try{
-            User user=User.createUser(userForm, passwordEncoder);
+            Member user= Member.createUser(userForm, passwordEncoder);
             userService.createUser(user);
         }catch (IllegalStateException e){
             model.addAttribute("errorMessage", e.getMessage());
@@ -80,10 +80,17 @@ public class UserController {
     }
 
     @ApiOperation(value="로그인 폼")
-    @PostMapping("/login")
+    @GetMapping("/login")
     public String loginForm(){
 
-        return "/login";
+        return "/users/loginForm";
+    }
+
+    @GetMapping(value="/login/error")
+    public String loginError(Model model){
+        model.addAttribute("loginErrorMsg", "아이디 또는 비밀번호를 확인해주세요.");
+        return "/users/loginForm";
+
     }
 /*    @ApiOperation(value="회원가입 정보 폼")
     @PostMapping("/resister")
@@ -98,7 +105,7 @@ public class UserController {
     @ApiOperation("마이 페이지 조회")
     @GetMapping("/users")
     public String list(Model model){
-        List<User> users=userService.findUsers();
+        List<Member> users=userService.findUsers();
         model.addAttribute("users", users);
         return "users/userList";
     }
