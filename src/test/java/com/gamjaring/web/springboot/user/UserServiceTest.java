@@ -10,6 +10,7 @@ import org.springframework.test.context.TestPropertySource;
 import javax.transaction.Transactional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 @SpringBootTest
@@ -38,6 +39,19 @@ public class UserServiceTest {
         assertEquals(user.getEmail(), savedUser.getEmail());
         assertEquals(user.getName(), savedUser.getName());
         assertEquals(user.getPassword(), savedUser.getPassword());
+
+    }
+
+    @Test
+    @DisplayName("중복 회원가입 테스트")
+    public void saveDuplicateMemberTest(){
+        User user1=createUser();
+        User user2=createUser();
+        userService.createUser(user1);
+
+        Throwable e =assertThrows(IllegalStateException.class, ()->{
+            userService.createUser(user2);});
+        assertEquals("이미 가입된 회원입니다.", e.getMessage());
 
     }
 

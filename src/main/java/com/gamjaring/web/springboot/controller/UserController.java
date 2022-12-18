@@ -10,12 +10,14 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
+import javax.validation.Valid;
 import java.util.List;
 
 //@Tag(name="signup", description="회원가입 API")
@@ -46,9 +48,9 @@ public class UserController {
 
     @ApiOperation(value="회원가입 폼")
     @GetMapping("/resister")
-    public String create(Model model){
+    public String create(Model model){//뷰에 UserForm 데이터 형태 넘기기
         model.addAttribute("userForm", new UserForm());
-        return "user/userForm";
+        return "users/userForm";
     }
 
     @ApiOperation(value="회원가입")
@@ -59,6 +61,24 @@ public class UserController {
 
         return "redirect:/";//회원가입 완료
     }
+
+    @ApiOperation(value="회원가입 정보 검증")
+    @PostMapping(value="/register")
+    public String newUser(@Valid UserForm userForm,
+                          BindingResult bindingResult, Model model){
+        if(bindingResult.hasErrors()){
+            return "users/userForm";
+        }
+        try{
+            User user=User.createUser(userForm, passwordEncoder);
+            userService.createUser(user);
+        }catch (IllegalStateException e){
+            model.addAttribute("errorMessage", e.getMessage());
+            return "users/userForm";
+        }
+        return "redirect:/";
+    }
+
     @ApiOperation(value="로그인 폼")
     @PostMapping("/login")
     public String loginForm(){

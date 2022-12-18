@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService{
     //중복 이메일로 회원가입 시도하면 예외 발생
     public void validateDuplicateUser(User user){
         if(userRepository.findByEmail(user.getEmail())!=null){
-            throw new IllegalStateException("이미 가입이 된 아이디입니다.");
+            throw new IllegalStateException("이미 가입된 회원입니다.");
         }
 
     }
