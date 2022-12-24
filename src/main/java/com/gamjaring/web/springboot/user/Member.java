@@ -9,7 +9,7 @@ import lombok.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
-
+//Member gender를 nullable
 @Getter
 @Setter
 @Table(name="user")
@@ -18,7 +18,7 @@ public class Member {
 
 
     @Id
-    //@Column(name="user_id")
+    @Column(name="user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -29,6 +29,15 @@ public class Member {
 
     @Column(unique = true)
     private String email;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = true)
+    private Gender gender;
+
+
+
+    @Column(name="my_img")
+    private String img;
 
     //user Entity를 이렇게 생성
     public static Member createUser(UserForm userForm, PasswordEncoder passwordEncoder){
@@ -49,10 +58,7 @@ public class Member {
 //    @Column
 //    private String picture;
 
-//    @Enumerated(EnumType.STRING)
-//    @Column(nullable = false)
-//    private Role role;
-
+//
 
 
 /*

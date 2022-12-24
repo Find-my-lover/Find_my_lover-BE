@@ -23,3 +23,20 @@ notifications: # 4.
     recipients:
       - tahen922@naver.com
       - yerinyoon@ewhain.net
+
+before_deploy:
+  - zip -r SpringBootWebService ./*
+  - mkdir -p deploy
+  - mv SpringBootWebService.zip deploy/SpringBootWebService.zip
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+    bucket: ringmybellbucket
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private #zip 파일 접근 private으로
+    local_dir: deploy #before_deploy에서 생성한 디렉토리
+    wait_until_deployed : true
