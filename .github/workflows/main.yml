@@ -58,7 +58,7 @@ jobs:
       run: 
         aws deploy create-deployment 
         --application-name Ringmybell 
-        --deployment-group-name codedeploy 
+        --deployment-group-name ringmybell 
         --file-exists-behavior OVERWRITE 
         --s3-location bucket=ringmybellbucket,bundleType=zip,key=ringmybell.zip 
         --region ap-northeast-2
