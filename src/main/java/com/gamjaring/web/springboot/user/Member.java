@@ -36,7 +36,7 @@ public class Member {
 
 
 
-    @Column(name="my_img")
+    @Column(name="my_img", nullable = false)
     private String img;
 
     //user Entity를 이렇게 생성
