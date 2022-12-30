@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  S3_BUCKET_NAME: ringmybellbucket
+  S3_BUCKET_NAME: ringmybell-deploy
 
 jobs:
   build:
