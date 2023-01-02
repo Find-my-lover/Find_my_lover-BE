@@ -19,14 +19,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Autowired
     private final UserRepository userRepository;
-<<<<<<< HEAD
-=======
-
-    public UserServiceImpl(UserRepository userRepository){
-        this.userRepository=userRepository;
-    }
-
->>>>>>> 89e27bc07d4e3c0b2e44f3f244730f7924b12121
     @Autowired
     private PasswordEncoder passwordEncoder;
 
@@ -68,7 +60,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         if(!passwordEncoder.matches(password, loginUser.getPassword())){
             System.out.println("비밀번호가 일치하지 않습니다.");
             return false;
-         }
+        }
 
         return true;
     }
