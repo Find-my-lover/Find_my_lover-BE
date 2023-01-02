@@ -32,10 +32,19 @@ jobs:
     # 디렉토리 생성
     - name: Make Directory
       run: mkdir -p deploy
-        
+          
     # Jar 파일 복사
     - name: Copy Jar
       run: cp ./build/libs/*.jar ./deploy
+      
+    # appspec.yml 파일 복사
+    - name: Copy appspec.yml
+      run: cp appspec.yml ./deploy
+
+
+    # script files 복사
+    - name: Copy script
+      run: cp ./scripts/*.sh ./deploy
 
     - name: Make zip file
       run: zip -r ./ringmybell.zip ./deploy
