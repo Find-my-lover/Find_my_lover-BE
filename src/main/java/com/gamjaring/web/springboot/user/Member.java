@@ -6,6 +6,7 @@ package com.gamjaring.web.springboot.user;
 
 //import com.sun.javafx.beans.IDProperty;
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
@@ -19,7 +20,8 @@ public class Member {
 
     @Id
     @Column(name="user_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator="native")
+    @GenericGenerator(name="native", strategy="native")
     private Long id;
 
 
