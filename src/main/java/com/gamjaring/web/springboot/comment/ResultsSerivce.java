@@ -1,2 +1,4 @@
-package com.gamjaring.web.springboot.comment;public class ResultsSerivce {
+package com.gamjaring.web.springboot.comment;
+
+public class ResultsSerivce {
 }

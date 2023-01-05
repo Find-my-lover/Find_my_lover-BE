@@ -1,6 +1,7 @@
 package com.gamjaring.web.springboot.comment;
 
-import com.gamjaring.web.springboot.user.User;
+import com.gamjaring.web.springboot.user.Member;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -19,16 +20,19 @@ public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "comment_id")
     private Long id;
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String comment; // 코멘트 내용
+    private String content; // 코멘트 내용
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private Member user; // 작성자
 
     @ManyToOne
     @JoinColumn(name = "results_id")
     private Results results;    //한개의 결과에 여러개의 코멘트
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user; // 작성자
+
 }
