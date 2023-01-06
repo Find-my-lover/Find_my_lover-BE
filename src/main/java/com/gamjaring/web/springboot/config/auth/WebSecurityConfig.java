@@ -49,13 +49,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
         http.formLogin()
 
-                .loginPage("/users/login")
+                .loginPage("/login")
                 .defaultSuccessUrl("/")
                 .usernameParameter("email")
-                .failureUrl("/users/login/error")
+                .failureUrl("/login/error")
                 .and()
                 .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/users/logout"))
+                .logoutRequestMatcher(new AntPathRequestMatcher("/use/logout"))
                 .logoutSuccessUrl("/");
     }
 

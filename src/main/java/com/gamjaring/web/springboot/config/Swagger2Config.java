@@ -1,7 +1,12 @@
 package com.gamjaring.web.springboot.config;
 
+import com.gamjaring.web.springboot.config.auth.WebSecurityConfig;
+import com.gamjaring.web.springboot.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -13,7 +18,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 //api취급 판별기 class
 @Configuration
 @EnableSwagger2
-public class Swagger2Config{
+public class Swagger2Config extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    UserService userService;
+
+
     @Bean
     public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2)

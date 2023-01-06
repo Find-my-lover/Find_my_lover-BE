@@ -2,11 +2,12 @@ package com.gamjaring.web.springboot.controller;
 
 
 import com.gamjaring.web.springboot.user.Member;
-import com.gamjaring.web.springboot.user.UserForm;
+import com.gamjaring.web.springboot.user.UserDto;
 import com.gamjaring.web.springboot.user.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.Model;
@@ -49,14 +50,14 @@ public class UserController {
     @ApiOperation(value="회원가입 폼")
     @GetMapping("/resister")
     public String create(Model model){//뷰에 UserForm 데이터 형태 넘기기
-        model.addAttribute("userForm", new UserForm());
+        model.addAttribute("userForm", new UserDto());
         return "users/userForm";
     }
 
     @ApiOperation(value="회원가입")
-    @PostMapping
-    public String userForm(UserForm userForm){
-        Member user= Member.createUser(userForm, passwordEncoder);
+    @PostMapping("/register")
+    public String userForm(UserDto userDto){
+        Member user= Member.createUser(userDto, passwordEncoder);
         userService.createUser(user);
 
         return "redirect:/";//회원가입 완료
@@ -64,13 +65,13 @@ public class UserController {
 
     @ApiOperation(value="회원가입 정보 검증")
     @PostMapping(value="/register")
-    public String newUser(@Valid UserForm userForm,
+    public String newUser(@Valid UserDto userDto,
                           BindingResult bindingResult, Model model){
         if(bindingResult.hasErrors()){
             return "users/userForm";
         }
         try{
-            Member user= Member.createUser(userForm, passwordEncoder);
+            Member user= Member.createUser(userDto, passwordEncoder);
             userService.createUser(user);
         }catch (IllegalStateException e){
             model.addAttribute("errorMessage", e.getMessage());

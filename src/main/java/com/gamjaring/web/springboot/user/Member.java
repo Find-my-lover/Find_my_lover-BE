@@ -24,31 +24,33 @@ public class Member {
     @GenericGenerator(name="native", strategy="native")
     private Long id;
 
-
+    @Column(nullable = false, length=100)
     private String password;
 
+    //name
+    @Column(nullable=false)
     private String name;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false, length=50)
     private String email;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = true)
     private Gender gender;
-
-
-
+/*
+    @OneToMany
+    @JoinColumn(name="user_id")
     @Column(name="my_img", nullable = false)
-    private String img;
-
+    private Image image;
+*/
     //user Entity를 이렇게 생성
-    public static Member createUser(UserForm userForm, PasswordEncoder passwordEncoder){
+    public static Member createUser(UserDto userDto, PasswordEncoder passwordEncoder){
         Member user=new Member();
-        user.setName(userForm.getName());
-        user.setEmail(userForm.getEmail());
+        user.setName(userDto.getName());
+        user.setEmail(userDto.getEmail());
 
         //패스워드는 처리를 해주자.
-        String password=passwordEncoder.encode(userForm.getPassword());
+        String password=passwordEncoder.encode(userDto.getPassword());
         user.setPassword(password);
 
         return user;

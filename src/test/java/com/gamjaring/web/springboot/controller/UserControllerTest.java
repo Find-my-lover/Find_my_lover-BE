@@ -1,7 +1,7 @@
 package com.gamjaring.web.springboot.controller;
 
 import com.gamjaring.web.springboot.user.Member;
-import com.gamjaring.web.springboot.user.UserForm;
+import com.gamjaring.web.springboot.user.UserDto;
 import com.gamjaring.web.springboot.user.UserService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders;
 import org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -35,11 +34,11 @@ public class UserControllerTest {
 
     //로그인하기위해 회원가입이 되어있는 유저를 미리 만들 수 있는 메서드 설정
     public Member createUser(String email, String password){
-       UserForm userForm=new UserForm();
-       userForm.setEmail(email);
-       userForm.setName("예무무");
-       userForm.setPassword(password);
-       Member user=Member.createUser(userForm, passwordEncoder);
+       UserDto userDto =new UserDto();
+       userDto.setEmail(email);
+       userDto.setName("예무무");
+       userDto.setPassword(password);
+       Member user=Member.createUser(userDto, passwordEncoder);
        return userService.createUser(user);
     }
 

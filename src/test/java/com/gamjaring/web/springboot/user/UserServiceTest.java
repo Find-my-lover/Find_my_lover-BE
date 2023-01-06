@@ -22,11 +22,11 @@ public class UserServiceTest {
     PasswordEncoder passwordEncoder;
 
     public Member createUser(){
-        UserForm userForm=new UserForm();
-        userForm.setEmail("yerinyoon@ewhain.net");
-        userForm.setName("예린");
-        userForm.setPassword("12345");
-        return Member.createUser(userForm, passwordEncoder);
+        UserDto userDto =new UserDto();
+        userDto.setEmail("yerinyoon@ewhain.net");
+        userDto.setName("예린");
+        userDto.setPassword("12345");
+        return Member.createUser(userDto, passwordEncoder);
     }
 
     @Test
