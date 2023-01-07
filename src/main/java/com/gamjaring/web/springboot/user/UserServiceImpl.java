@@ -76,8 +76,19 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     }
 
-    public List<Member> findUsers(){
+    @Override
+    public List<Member> getUsers(){
         return userRepository.findAll();
+    }
+
+    @Override
+    public Member getUser(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public void updateGender(String email, Gender gender) {
+        userRepository.updateGender(email, gender);
     }
 
 

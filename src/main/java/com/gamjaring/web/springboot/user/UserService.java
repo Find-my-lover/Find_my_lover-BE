@@ -9,5 +9,7 @@ public interface UserService {
     boolean validationLogin(String name, String password);
 
     void validateDuplicateUser(Member user);
-    public List<Member> findUsers();
+    public List<Member> getUsers();
+    public Member getUser(String email);
+    public void updateGender(String email, Gender gender);
 }

@@ -5,6 +5,7 @@
 package com.gamjaring.web.springboot.user;
 
 //import com.sun.javafx.beans.IDProperty;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -12,6 +13,9 @@ import javax.persistence.*;
 //Member gender를 nullable
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@RequiredArgsConstructor
 @Table(name="user")
 @Entity
 public class Member {
@@ -21,7 +25,6 @@ public class Member {
     @Column(name="user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
 
     private String password;
 
@@ -34,10 +37,10 @@ public class Member {
     @Column(nullable = true)
     private Gender gender;
 
-
-
-    @Column(name="my_img", nullable = false)
-    private String img;
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "fk_memberimg")
+    @JsonManagedReference
+    private MemberImg memberImg;
 
     //user Entity를 이렇게 생성
     public static Member createUser(UserForm userForm, PasswordEncoder passwordEncoder){

@@ -103,7 +103,7 @@ public class UserController {
     @ApiOperation("마이 페이지 조회")
     @GetMapping("/users")
     public String list(Model model){
-        List<Member> users=userService.findUsers();
+        List<Member> users=userService.getUsers();
         model.addAttribute("users", users);
         return "users/userList";
     }
