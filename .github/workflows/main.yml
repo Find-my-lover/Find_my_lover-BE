@@ -8,6 +8,7 @@ on:
 
 env:
   S3_BUCKET_NAME: ringmybell-deploy
+  RESOURCE_PATH: /home/runner/work/Find-my-lover/Find_my_lover-BE/src/main/resources
 
 jobs:
   build:
