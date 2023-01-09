@@ -1,5 +1,9 @@
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.service;
 
+import com.gamjaring.web.springboot.repository.MemberImgRepository;
+import com.gamjaring.web.springboot.repository.UserRepository;
+import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.domain.MemberImg;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -10,7 +14,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class MemberImgServiceImpl implements MemberImgService{
+public class MemberImgServiceImpl implements MemberImgService {
 
     private final UserRepository userRepository;
     private final MemberImgRepository memberImgRepository;

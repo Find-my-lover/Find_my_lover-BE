@@ -1,6 +1,9 @@
 //엔터티를 데이터 베이스에 저장
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.repository;
 
+import com.gamjaring.web.springboot.domain.Gender;
+import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.domain.MemberImg;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

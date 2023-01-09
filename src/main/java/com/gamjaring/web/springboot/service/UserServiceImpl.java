@@ -1,7 +1,10 @@
 //User가 null일경우 에러가 떠버릴 수도 있다.
 
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.service;
 
+import com.gamjaring.web.springboot.repository.UserRepository;
+import com.gamjaring.web.springboot.domain.Gender;
+import com.gamjaring.web.springboot.domain.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,6 +1,9 @@
 package com.gamjaring.web.springboot.controller;
 
-import com.gamjaring.web.springboot.user.*;
+import com.gamjaring.web.springboot.domain.Gender;
+import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.service.MemberImgServiceImpl;
+import com.gamjaring.web.springboot.service.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

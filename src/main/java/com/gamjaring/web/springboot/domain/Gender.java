@@ -1,5 +1,5 @@
 //관리자가 필요해지면 사용하기
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.domain;
 
 //
 import lombok.Getter;

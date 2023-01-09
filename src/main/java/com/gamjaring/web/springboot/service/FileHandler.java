@@ -1,5 +1,6 @@
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.service;
 
+import com.gamjaring.web.springboot.domain.MemberImg;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.multipart.MultipartFile;

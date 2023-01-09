@@ -1,7 +1,9 @@
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.service;
 
 import java.util.List;
-import org.springframework.security.core.userdetails.UserDetailsService;
+
+import com.gamjaring.web.springboot.domain.Gender;
+import com.gamjaring.web.springboot.domain.Member;
 
 public interface UserService {
     Member createUser(Member user);

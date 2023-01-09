@@ -1,9 +1,9 @@
 package com.gamjaring.web.springboot.controller;
 
 
-import com.gamjaring.web.springboot.user.Member;
+import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.user.UserForm;
-import com.gamjaring.web.springboot.user.UserService;
+import com.gamjaring.web.springboot.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
