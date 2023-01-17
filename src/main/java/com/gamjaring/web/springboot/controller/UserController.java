@@ -48,21 +48,22 @@ public class UserController {
 
 
     @ApiOperation(value="회원가입 폼")
-    @GetMapping("/resister")
+    @GetMapping("/resister/form")
     public String create(Model model){//뷰에 UserForm 데이터 형태 넘기기
         model.addAttribute("userForm", new UserDto());
         return "users/userForm";
     }
 
+    /*
     @ApiOperation(value="회원가입")
-    @PostMapping("/register")
+    @PostMapping("/register/form")
     public String userForm(UserDto userDto){
         Member user= Member.createUser(userDto, passwordEncoder);
         userService.createUser(user);
 
         return "redirect:/";//회원가입 완료
     }
-
+*/
     @ApiOperation(value="회원가입 정보 검증")
     @PostMapping(value="/register")
     public String newUser(@Valid UserDto userDto,

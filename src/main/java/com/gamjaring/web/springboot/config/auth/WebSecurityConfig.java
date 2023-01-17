@@ -1,8 +1,6 @@
 package com.gamjaring.web.springboot.config.auth;
 
-import com.gamjaring.web.springboot.user.UserRepository;
-import com.gamjaring.web.springboot.user.UserService;
-import com.gamjaring.web.springboot.user.UserServiceImpl;
+import com.gamjaring.web.springboot.user.*;
 import lombok.RequiredArgsConstructor;
 import org.h2.engine.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -33,7 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     //일단 이렇게 하되 어떻게 바꿔야할지 고민하기
 */
     @Autowired
-    private UserDetailsService userDetailsService;
+    private CustomUserDetailsService customUserDetailsService;
 
 
     @Bean
@@ -60,8 +59,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
+    public void configure(WebSecurity web) throws Exception {
+        web
+                .ignoring().antMatchers( "/css/**", "/js/**", "/img/**");
+    }
+
+    @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-        auth.userDetailsService(userDetailsService)
+        auth.userDetailsService(customUserDetailsService)
         .passwordEncoder(passwordEncoder());
     }
 

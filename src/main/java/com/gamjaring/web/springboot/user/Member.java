@@ -37,6 +37,10 @@ public class Member {
     @Enumerated(EnumType.STRING)
     @Column(nullable = true)
     private Gender gender;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable=false)
+    private Role role;
 /*
     @OneToMany
     @JoinColumn(name="user_id")
