@@ -2,6 +2,7 @@ package com.gamjaring.web.springboot.user;
 
 import java.io.Serializable;
 
+
 public class UserSessionDto implements Serializable {
     private String name;
     private String password;
