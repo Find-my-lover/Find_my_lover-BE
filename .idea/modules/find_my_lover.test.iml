@@ -25,5 +25,4 @@
     <exclude-output />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
-  <component name="TestModuleProperties" production-module="find_my_lover.main" />
 </module>
