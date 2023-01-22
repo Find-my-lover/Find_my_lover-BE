@@ -1,5 +1,7 @@
 package com.gamjaring.web.springboot.user;
 
+import com.gamjaring.web.springboot.domain.Member;
+
 import java.io.Serializable;
 
 public class UserSessionDto implements Serializable {

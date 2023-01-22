@@ -1,13 +1,12 @@
 package com.gamjaring.web.springboot.controller;
 
 
-import com.gamjaring.web.springboot.user.Member;
+import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.service.UserService;
 import com.gamjaring.web.springboot.user.UserDto;
-import com.gamjaring.web.springboot.user.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.Model;

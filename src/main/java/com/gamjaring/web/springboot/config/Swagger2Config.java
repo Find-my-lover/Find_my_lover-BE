@@ -1,7 +1,7 @@
 package com.gamjaring.web.springboot.config;
 
 import com.gamjaring.web.springboot.config.auth.WebSecurityConfig;
-import com.gamjaring.web.springboot.user.UserService;
+import com.gamjaring.web.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

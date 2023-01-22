@@ -6,12 +6,15 @@ package com.gamjaring.web.springboot.domain;
 
 //import com.sun.javafx.beans.IDProperty;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.gamjaring.web.springboot.user.UserForm;
+import com.gamjaring.web.springboot.user.Role;
+import com.gamjaring.web.springboot.user.UserDto;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
+import javax.validation.Valid;
+
 //Member gender를 nullable
 @Getter
 @Setter
@@ -55,7 +58,7 @@ public class Member {
     private MemberImg memberImg;
 
     //user Entity를 이렇게 생성
-    public static Member createUser(UserDto userDto, PasswordEncoder passwordEncoder){
+    public static Member createUser(@Valid UserDto userDto, PasswordEncoder passwordEncoder){
         Member user=new Member();
         user.setName(userDto.getName());
         user.setEmail(userDto.getEmail());

@@ -1,7 +1,7 @@
 package com.gamjaring.web.springboot.user;
 
+import com.gamjaring.web.springboot.domain.Member;
 import lombok.AllArgsConstructor;
-import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
