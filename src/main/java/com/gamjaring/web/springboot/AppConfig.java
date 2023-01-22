@@ -1,6 +1,6 @@
 package com.gamjaring.web.springboot;
 
-import com.gamjaring.web.springboot.repository.UserRepository;
+import com.gamjaring.web.springboot.domain.UserRepository;
 import com.gamjaring.web.springboot.service.UserService;
 import com.gamjaring.web.springboot.service.UserServiceImpl;
 import org.springframework.context.annotation.Bean;

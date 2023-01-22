@@ -1,7 +1,7 @@
 package com.gamjaring.web.springboot.service;
 
-import com.gamjaring.web.springboot.repository.MemberImgRepository;
-import com.gamjaring.web.springboot.repository.UserRepository;
+import com.gamjaring.web.springboot.domain.MemberImgRepository;
+import com.gamjaring.web.springboot.domain.UserRepository;
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.domain.MemberImg;
 import org.springframework.stereotype.Service;

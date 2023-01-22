@@ -2,7 +2,7 @@
 
 package com.gamjaring.web.springboot.service;
 
-import com.gamjaring.web.springboot.repository.UserRepository;
+import com.gamjaring.web.springboot.domain.UserRepository;
 import com.gamjaring.web.springboot.domain.Gender;
 import com.gamjaring.web.springboot.domain.Member;
 import org.springframework.beans.factory.annotation.Autowired;
