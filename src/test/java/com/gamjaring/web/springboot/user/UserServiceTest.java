@@ -1,5 +1,7 @@
 package com.gamjaring.web.springboot.user;
 
+import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.service.UserService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

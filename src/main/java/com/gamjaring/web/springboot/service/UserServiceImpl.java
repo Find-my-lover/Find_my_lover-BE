@@ -1,7 +1,10 @@
 //User가 null일경우 에러가 떠버릴 수도 있다.
 
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.service;
 
+import com.gamjaring.web.springboot.domain.UserRepository;
+import com.gamjaring.web.springboot.domain.Gender;
+import com.gamjaring.web.springboot.domain.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.userdetails.User;
@@ -64,7 +67,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         if(!passwordEncoder.matches(password, loginUser.getPassword())){
             System.out.println("비밀번호가 일치하지 않습니다.");
             return false;
-         }
+        }
 
         return true;
     }
@@ -80,8 +83,19 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     }
 
-    public List<Member> findUsers(){
+    @Override
+    public List<Member> getUsers(){
         return userRepository.findAll();
+    }
+
+    @Override
+    public Member getUser(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public void updateGender(String email, Gender gender) {
+        userRepository.updateGender(email, gender);
     }
 
 

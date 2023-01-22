@@ -2,9 +2,11 @@
 //DB테이블과 1:1로 매핑되며 테이블이 가지지 않는 컬럼을 필드로 가져서는 안된다!!
 //서비스 클래스들과 비지니스 로직들은 이 클래스를 기준으로 동작
 
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.domain;
 
 //import com.sun.javafx.beans.IDProperty;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.gamjaring.web.springboot.user.UserForm;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -47,6 +49,11 @@ public class Member {
     @Column(name="my_img", nullable = false)
     private Image image;
 */
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "fk_memberimg")
+    @JsonManagedReference
+    private MemberImg memberImg;
+
     //user Entity를 이렇게 생성
     public static Member createUser(UserDto userDto, PasswordEncoder passwordEncoder){
         Member user=new Member();

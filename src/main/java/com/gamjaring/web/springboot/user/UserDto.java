@@ -16,6 +16,7 @@ public class UserDto {
     @NotBlank(message="이름을 입력해주세요")
     private String name;
 
+    //email이 pk인가?
     @NotBlank(message = "이메일을 입력해주세요")
     @Email(message = "이메일 형식으로 작성해주세요.")
     private String email;

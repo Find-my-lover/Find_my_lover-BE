@@ -35,8 +35,6 @@ public class UserController {
     public UserController(UserService userService, PasswordEncoder passwordEncoder){
         this.userService=userService;
         this.passwordEncoder=passwordEncoder;
-
-
     }
 
     //임시적으로 local host 8080에서 바로 로그인으로 가게 만들어둠.
@@ -107,7 +105,7 @@ public class UserController {
     @ApiOperation("마이 페이지 조회")
     @GetMapping("/users")
     public String list(Model model){
-        List<Member> users=userService.findUsers();
+        List<Member> users=userService.getUsers();
         model.addAttribute("users", users);
         return "users/userList";
     }
