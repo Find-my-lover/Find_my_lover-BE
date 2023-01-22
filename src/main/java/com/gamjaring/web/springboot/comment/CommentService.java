@@ -1,8 +1,9 @@
 package com.gamjaring.web.springboot.comment;
 
 
-import com.gamjaring.web.springboot.user.Member;
-import com.gamjaring.web.springboot.user.UserRepository;
+
+import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.domain.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,12 +19,11 @@ public class CommentService {
 
     /* CREATE */
     @Transactional
-    public Long commentSave(String nickname, Long id, CommentRequestDto dto) {
-        Member user = userRepository.findByName(nickname);
+    public Long commentSave(String email, Long id, CommentRequestDto dto) {
+        Member user = userRepository.findByEmail(email);
         Results results = resultsRepository.findById(id).orElseThrow(() ->
                 new IllegalArgumentException("코멘트 작성 실패: 해당 결과페이지가 존재하지 않습니다." + id));
 
-        dto.setUser(user);
         dto.setResults(results);
 
         Comment comment = dto.toEntity();

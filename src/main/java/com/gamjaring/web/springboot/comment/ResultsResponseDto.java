@@ -12,21 +12,13 @@ import java.util.stream.Collectors;
 public class ResultsResponseDto {
 
     private Long id;
-    private String title;
-    private String writer;
-    private String content;
 
-    private int view;
     private Long userId;
     private List<CommentResponseDto> comments;
 
     /* Entity -> Dto*/
     public ResultsResponseDto(Results results) {
         this.id = results.getId();
-        this.title = results.getTitle();
-        this.writer = results.getWriter();
-        this.content = results.getContent();
-        this.view = results.getView();
         this.userId = results.getUser().getId();
         this.comments = results.getComments().stream().map(CommentResponseDto::new).collect(Collectors.toList());
     }

@@ -1,6 +1,7 @@
 package com.gamjaring.web.springboot.comment;
 
-import com.gamjaring.web.springboot.user.Member;
+
+import com.gamjaring.web.springboot.domain.Member;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +14,6 @@ import lombok.NoArgsConstructor;
 public class CommentRequestDto {
     private Long id;
     private String content;
-    private Member user;
     private Results results;
 
 
@@ -22,7 +22,6 @@ public class CommentRequestDto {
         Comment comments = Comment.builder()
                 .id(id)
                 .content(content)
-                .user(user)
                 .results(results)
                 .build();
         return comments;

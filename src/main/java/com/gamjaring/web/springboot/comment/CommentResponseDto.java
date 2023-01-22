@@ -1,7 +1,5 @@
 package com.gamjaring.web.springboot.comment;
 
-import com.gamjaring.web.springboot.user.Member;
-
 
 public class CommentResponseDto {
     private Long id;

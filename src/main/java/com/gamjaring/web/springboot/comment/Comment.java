@@ -1,7 +1,8 @@
 package com.gamjaring.web.springboot.comment;
 
-import com.gamjaring.web.springboot.user.Member;
 
+
+import com.gamjaring.web.springboot.domain.Member;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -26,9 +27,6 @@ public class Comment {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content; // 코멘트 내용
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private Member user; // 작성자
 
     @ManyToOne
     @JoinColumn(name = "results_id")
