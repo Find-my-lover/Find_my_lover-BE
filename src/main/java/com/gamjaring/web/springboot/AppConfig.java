@@ -1,11 +1,10 @@
 package com.gamjaring.web.springboot;
 
-import com.gamjaring.web.springboot.user.UserRepository;
-import com.gamjaring.web.springboot.user.UserService;
-import com.gamjaring.web.springboot.user.UserServiceImpl;
+import com.gamjaring.web.springboot.domain.UserRepository;
+import com.gamjaring.web.springboot.service.UserService;
+import com.gamjaring.web.springboot.service.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration

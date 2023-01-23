@@ -1,13 +1,12 @@
 package com.gamjaring.web.springboot.controller;
 
 
-import com.gamjaring.web.springboot.user.Member;
+import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.service.UserService;
 import com.gamjaring.web.springboot.user.UserDto;
-import com.gamjaring.web.springboot.user.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.Model;
@@ -35,8 +34,6 @@ public class UserController {
     public UserController(UserService userService, PasswordEncoder passwordEncoder){
         this.userService=userService;
         this.passwordEncoder=passwordEncoder;
-
-
     }
 
     //임시적으로 local host 8080에서 바로 로그인으로 가게 만들어둠.
@@ -48,7 +45,7 @@ public class UserController {
 
 
     @ApiOperation(value="회원가입 폼")
-    @GetMapping("/resister/form")
+    @GetMapping("/resister")
     public String create(Model model){//뷰에 UserForm 데이터 형태 넘기기
         model.addAttribute("userForm", new UserDto());
         return "users/userForm";
@@ -76,7 +73,7 @@ public class UserController {
             userService.createUser(user);
         }catch (IllegalStateException e){
             model.addAttribute("errorMessage", e.getMessage());
-            return "users/userForm";
+            return "/users/userForm";
         }
         return "redirect:/";
     }
@@ -106,7 +103,7 @@ public class UserController {
     @ApiOperation("마이 페이지 조회")
     @GetMapping("/users")
     public String list(Model model){
-        List<Member> users=userService.findUsers();
+        List<Member> users=userService.getUsers();
         model.addAttribute("users", users);
         return "users/userList";
     }

@@ -1,5 +1,8 @@
 package com.gamjaring.web.springboot.user;
 
+import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.domain.UserRepository;
+import com.gamjaring.web.springboot.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
