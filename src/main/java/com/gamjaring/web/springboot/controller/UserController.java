@@ -45,7 +45,7 @@ public class UserController {
 
 
     @ApiOperation(value="회원가입 폼")
-    @GetMapping("/resister/form")
+    @GetMapping("/resister")
     public String create(Model model){//뷰에 UserForm 데이터 형태 넘기기
         model.addAttribute("userForm", new UserDto());
         return "users/userForm";
@@ -73,11 +73,10 @@ public class UserController {
             userService.createUser(user);
         }catch (IllegalStateException e){
             model.addAttribute("errorMessage", e.getMessage());
-            return "users/userForm";
+            return "/users/userForm";
         }
         return "redirect:/";
     }
-
     @ApiOperation(value="로그인 폼")
     @GetMapping("/login")
     public String loginForm(){
