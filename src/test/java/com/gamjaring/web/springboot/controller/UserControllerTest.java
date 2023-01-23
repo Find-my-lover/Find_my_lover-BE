@@ -1,7 +1,7 @@
 package com.gamjaring.web.springboot.controller;
 
 import com.gamjaring.web.springboot.user.Member;
-import com.gamjaring.web.springboot.user.UserDto;
+import com.gamjaring.web.springboot.dto.UserDto;
 import com.gamjaring.web.springboot.user.UserService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
