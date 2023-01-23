@@ -7,7 +7,7 @@ package com.gamjaring.web.springboot.domain;
 //import com.sun.javafx.beans.IDProperty;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.gamjaring.web.springboot.user.Role;
-import com.gamjaring.web.springboot.user.UserDto;
+import com.gamjaring.web.springboot.dto.UserDto;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -3,7 +3,7 @@ package com.gamjaring.web.springboot.controller;
 
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.service.UserService;
-import com.gamjaring.web.springboot.user.UserDto;
+import com.gamjaring.web.springboot.dto.UserDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 

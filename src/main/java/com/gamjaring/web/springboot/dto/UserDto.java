@@ -1,6 +1,6 @@
 //DTO다.
 //계층 간의 데이터 교환을 담당하는 객체이다.
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.dto;
 
 import lombok.Getter;
 import lombok.Setter;
