@@ -1,4 +1,4 @@
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.dto;
 
 import com.gamjaring.web.springboot.domain.Member;
 import lombok.Getter;
