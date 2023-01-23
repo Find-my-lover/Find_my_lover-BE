@@ -1,7 +1,6 @@
 package com.gamjaring.web.springboot.comment;
 
 import com.gamjaring.web.springboot.config.auth.LoginUser;
-import com.gamjaring.web.springboot.user.UserSessionDto;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

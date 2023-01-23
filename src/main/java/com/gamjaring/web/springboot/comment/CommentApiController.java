@@ -1,7 +1,7 @@
 package com.gamjaring.web.springboot.comment;
 
 import com.gamjaring.web.springboot.config.auth.LoginUser;
-import com.gamjaring.web.springboot.user.UserSessionDto;
+import com.gamjaring.web.springboot.dto.UserSessionDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
