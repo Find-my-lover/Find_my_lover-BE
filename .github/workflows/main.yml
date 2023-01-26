@@ -56,6 +56,10 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-image-secret-key: ${{ secrets.AWS_IMAGE_SECRET_KEY}}
+        aws-image-access-key: ${{secrets.AWS_IMAGE_ACCESS_KEY}}
+        datasource-username: ${{secrets.DATASOURCE_USERNAME}}
+        datasource-password: ${{secrets.DATASOURCE_PASSWORD}}
         aws-region: ap-northeast-2
 
     - name: Upload to S3
@@ -66,6 +70,11 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_IMAGE_SECRET_KEY: ${{ secrets.AWS_IMAGE_SECRET_KEY}}
+        AWS_IMAGE_ACCESS_KEY: ${{secrets.AWS_IMAGE_ACCESS_KEY}}
+        DATASOURCE_USERNAME: ${{secrets.DATASOURCE_USERNAME}}
+        DATASOURCE_PASSWORD: ${{secrets.DATASOURCE_PASSWORD}}
+        
       run: 
         aws deploy create-deployment 
         --application-name ringmybell
