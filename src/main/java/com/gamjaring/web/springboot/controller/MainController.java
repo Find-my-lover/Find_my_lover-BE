@@ -39,7 +39,7 @@ public class MainController {
         Member member = userServiceImpl.getUser(email);
         userServiceImpl.updateGender(email, gender);
         memberImgServiceImpl.addMemberImg(member, file);
-        return ResponseEntity.ok().build();
-        //return ResponseEntity.ok(fileUploadService.save(file));
+//        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(fileUploadService.save(file));
     }
 }
