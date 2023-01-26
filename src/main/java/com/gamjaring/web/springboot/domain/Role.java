@@ -1,4 +1,4 @@
-package com.gamjaring.web.springboot.user;
+package com.gamjaring.web.springboot.domain;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

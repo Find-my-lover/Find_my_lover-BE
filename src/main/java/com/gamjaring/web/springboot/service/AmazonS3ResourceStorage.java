@@ -21,6 +21,7 @@ public class AmazonS3ResourceStorage {
 
     public void store(String fullPath, MultipartFile multipartFile) {
         File file = new File(MultipartUtil.getLocalHomeDirectory(), fullPath);
+        System.out.println("fullPath = " + fullPath);
         try {
             multipartFile.transferTo(file);
             amazonS3Client.putObject(new PutObjectRequest(bucket, fullPath, file)
