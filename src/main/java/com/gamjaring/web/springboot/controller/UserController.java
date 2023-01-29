@@ -1,6 +1,7 @@
 package com.gamjaring.web.springboot.controller;
 
 
+import com.gamjaring.web.springboot.VO.UserVO;
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.service.UserService;
 import com.gamjaring.web.springboot.dto.UserDto;
@@ -11,12 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -107,7 +106,30 @@ public class UserController {
         model.addAttribute("users", users);
         return "users/userList";
     }
+/*
+    @ApiOperation("아이디 찾기")
+    @GetMapping("/users/search_id")
+    public String search_id(HttpServletRequest request, Model model, UserVO searchVO){
+        return "/users/search_id";
+    }
+
+    @ApiOperation("아이디 찾아서 반환")
+    @GetMapping("/users/search_id")
+    public String search_result_id(HttpServletRequest request, Model model, @RequestParam(required = true, value="user_name") String user_name){
+        return "/users/search_id";
+    }
+*/
+    /*
+    @ApiOperation("패스워드 찾기")
+    @GetMapping("/users/search_pwd")
+    public String search_pwd(HttpServletRequest request, Model model, UserVO searchVO){
+        return "/users/search_pwd";
+    }
+    @ApiOperation("비밀번호 찾아서 반환")
+    @GetMapping("/users/search_id")
+    public String search_result_id(HttpServletRequest request, Model model, @RequestParam(required = true, value="user_name") String user_name) {
+        return "/users/search_id";
 
 
-
+    }*/
 }

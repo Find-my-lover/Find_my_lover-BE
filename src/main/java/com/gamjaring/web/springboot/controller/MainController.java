@@ -36,9 +36,9 @@ public class MainController {
                                     @Valid @RequestParam Gender gender,
                                     @Valid @RequestParam MultipartFile file) throws Exception {
         //email로 사용자를 찾고 gender를 최신화하고 image를 저장한다.
-        Member member = userServiceImpl.getUser(email);
-        userServiceImpl.updateGender(email, gender);
-        memberImgServiceImpl.addMemberImg(member, file);
+//        Member member = userServiceImpl.getUser(email);
+//        userServiceImpl.updateGender(email, gender);
+//        memberImgServiceImpl.addMemberImg(member, file);
 //        return ResponseEntity.ok().build();
         return ResponseEntity.ok(fileUploadService.save(file));
     }

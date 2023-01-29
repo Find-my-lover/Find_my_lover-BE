@@ -40,6 +40,7 @@ public class CustomUserDetails implements UserDetails{
         return true;
     }
 
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities(){
         Collection<GrantedAuthority> collectors=new ArrayList<>();

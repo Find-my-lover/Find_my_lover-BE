@@ -2,6 +2,7 @@
 //계층 간의 데이터 교환을 담당하는 객체이다.
 package com.gamjaring.web.springboot.dto;
 
+import com.gamjaring.web.springboot.domain.Role;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;
@@ -13,7 +14,7 @@ import javax.validation.constraints.NotBlank;
 @Getter
 public class UserDto {
 
-    @NotBlank(message="이름을 입력해주세요")
+    @NotBlank(message="닉네임을 입력해주세요")
     private String name;
 
     //email이 pk인가?

@@ -17,7 +17,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.util.matcher.AndRequestMatcher;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.security.web.util.matcher.RequestHeaderRequestMatcher;
 import org.springframework.stereotype.Component;
 
 @Configuration
@@ -56,12 +58,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/use/logout"))
                 .logoutSuccessUrl("/");
+
     }
+
 
     @Override
     public void configure(WebSecurity web) throws Exception {
+
+        AntPathRequestMatcher antPathRequestMatcher = new AntPathRequestMatcher("/result");
+        AndRequestMatcher andRequestMatcher = new AndRequestMatcher(antPathRequestMatcher);
+
+
         web
-                .ignoring().antMatchers( "/css/**", "/js/**", "/img/**");
+                .ignoring().antMatchers( "/css/**", "/js/**", "/img/**")
+                .antMatchers("/**");
     }
 
     @Override

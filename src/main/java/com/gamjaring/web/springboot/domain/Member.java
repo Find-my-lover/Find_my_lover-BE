@@ -45,6 +45,8 @@ public class Member {
     @Enumerated(EnumType.STRING)
     @Column(nullable=false)
     private Role role;
+
+
 /*
     @OneToMany
     @JoinColumn(name="user_id")
