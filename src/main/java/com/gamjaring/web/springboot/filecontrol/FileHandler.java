@@ -1,4 +1,4 @@
-package com.gamjaring.web.springboot.service;
+package com.gamjaring.web.springboot.filecontrol;
 
 import com.gamjaring.web.springboot.domain.MemberImg;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 @Component
-public class FileHandler {
+public class FileHandler { // TODO : S3Uploader 클래스가 완성되면 더 이상 필요없는 클래스. 지워야 한다.
     public List<MemberImg> parseFileInfo(ArrayList<MultipartFile> multipartFiles) throws IOException {
         // 반환을 할 파일 리스트
         List<MemberImg> fileList = new ArrayList<>();
@@ -28,6 +28,8 @@ public class FileHandler {
         String current_date = simpleDateFormat.format(new Date());
 
         // 프로젝트 폴더에 저장하기 위해 절대경로를 설정 (Window 의 Tomcat 은 Temp 파일을 이용한다)
+        //String absolutePath = new File("").getAbsolutePath() + "\\";
+        //TODO : absolutePath를 S3의 기본 경로로 설정해야 함.
         String absolutePath = new File("").getAbsolutePath() + "\\";
 
         // 경로를 지정하고 그곳에다가 저장할 심산이다
