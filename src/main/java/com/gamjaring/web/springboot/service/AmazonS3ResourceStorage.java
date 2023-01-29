@@ -21,9 +21,14 @@ public class AmazonS3ResourceStorage {
 
     public void store(String fullPath, MultipartFile multipartFile) {
         File file = new File(MultipartUtil.getLocalHomeDirectory(), fullPath);
+
         System.out.println("fullPath = " + fullPath);
+        System.out.println(MultipartUtil.getLocalHomeDirectory());
+        System.out.println(file.exists());
         try {
+            //file.createNewFile();
             multipartFile.transferTo(file);
+            //System.out.println("s3 problem");
             amazonS3Client.putObject(new PutObjectRequest(bucket, fullPath, file)
                     .withCannedAcl(CannedAccessControlList.PublicRead));
         } catch (Exception e) {
@@ -33,5 +38,5 @@ public class AmazonS3ResourceStorage {
                 file.delete();
             }
         }
-    }
+        }
 }
