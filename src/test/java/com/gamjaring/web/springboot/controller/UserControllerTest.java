@@ -1,8 +1,8 @@
 package com.gamjaring.web.springboot.controller;
 
 import com.gamjaring.web.springboot.domain.Member;
+import com.gamjaring.web.springboot.dto.UserDto;
 import com.gamjaring.web.springboot.service.UserService;
-import com.gamjaring.web.springboot.user.UserDto;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
