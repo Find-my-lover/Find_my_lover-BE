@@ -6,7 +6,6 @@ import lombok.Getter;
 import java.io.Serializable;
 
 @Getter
-
 public class UserSessionDto implements Serializable {
     private final String name;
     private final String password;

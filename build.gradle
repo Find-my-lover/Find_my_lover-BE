@@ -49,6 +49,8 @@ dependencies {
 
 
 
+
+
     //DB
 
     implementation 'mysql:mysql-connector-java'
@@ -59,6 +61,8 @@ dependencies {
     implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.6'\
 
     implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
+    implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
 
 
 
