@@ -58,6 +58,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/use/logout"))
                 .logoutSuccessUrl("/");
+
     }
 
 
@@ -70,8 +71,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         web
                 .ignoring().antMatchers( "/css/**", "/js/**", "/img/**")
-                .requestMatchers(andRequestMatcher)
-        ;
+                .antMatchers("/**");
     }
 
     @Override
