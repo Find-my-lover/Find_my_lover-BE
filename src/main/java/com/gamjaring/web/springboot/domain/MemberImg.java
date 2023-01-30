@@ -1,7 +1,6 @@
 package com.gamjaring.web.springboot.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.gamjaring.web.springboot.domain.Member;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -30,7 +29,7 @@ public class MemberImg {
 
     private long file_size;
 
-    @ManyToOne
+    @OneToOne(mappedBy = "memberImg")
     @JsonBackReference
     private Member member;
 }

@@ -4,7 +4,6 @@
 
 package com.gamjaring.web.springboot.domain;
 
-//import com.sun.javafx.beans.IDProperty;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.gamjaring.web.springboot.dto.UserDto;
 import lombok.*;
@@ -13,7 +12,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import javax.validation.Valid;
-import java.util.ArrayList;
 
 //Member gender를 nullable
 @Getter
@@ -40,7 +38,7 @@ public class Member {
     private String email;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = true)
+    @Column
     private Gender gender;
 
     @Enumerated(EnumType.STRING)
@@ -54,10 +52,10 @@ public class Member {
     @Column(name="my_img", nullable = false)
     private Image image;
 */
-    @OneToMany(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "member_img")
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "fk_memberimg")
     @JsonManagedReference
-    private ArrayList<MemberImg> memberImg;
+    private MemberImg memberImg;
 
     //user Entity를 이렇게 생성
     public static Member createUser(@Valid UserDto userDto, PasswordEncoder passwordEncoder){
