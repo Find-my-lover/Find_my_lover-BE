@@ -36,7 +36,7 @@ public class S3Uploader {
         // TODO : dirName 과 uploadFile.getName()을 조정해야 한다. dirName 은 MemberImgServiceImpl 클래스에서 조정.
         // TODO : dirName 은 개인의 닉네임 혹은 이메일로 하고 파일 이름은 뭘로 할지 논의
         // TODO : 내 생각은 개인 폴더마다 자신 사진, 커플 사진, 방과 합쳐진 사진 정도만 있고 테스트를 여러 번 할 경우 이전 사진을 지우면서 최신화하는 게 좋을 듯
-        // TODO : 예를 들어 jjang9877@gmail.com 폴더 안에 "self20230130", "couple20230130", "final20230130" 사진만 있고 테스트 마다 최신화 하는 것.
+        // TODO : 예를 들어 jjang9877@gmail.com 폴더 안에 "self", "couple", "final" 사진만 있고 테스트 마다 최신화 하는 것.
         String fileName = dirName + "/" + uploadFile.getName();
         String uploadImageUrl = putS3(uploadFile, fileName);
         removeNewFile(uploadFile);
