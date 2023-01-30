@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import javax.validation.Valid;
+import java.util.ArrayList;
 
 //Member gender를 nullable
 @Getter
@@ -53,10 +54,10 @@ public class Member {
     @Column(name="my_img", nullable = false)
     private Image image;
 */
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "fk_memberimg")
+    @OneToMany(cascade = {CascadeType.ALL})
+    @JoinColumn(name = "member_img")
     @JsonManagedReference
-    private MemberImg memberImg;
+    private ArrayList<MemberImg> memberImg;
 
     //user Entity를 이렇게 생성
     public static Member createUser(@Valid UserDto userDto, PasswordEncoder passwordEncoder){
