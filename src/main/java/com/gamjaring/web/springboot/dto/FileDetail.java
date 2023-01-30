@@ -1,6 +1,6 @@
 package com.gamjaring.web.springboot.dto;
 
-import com.gamjaring.web.springboot.service.MultipartUtil;
+import com.gamjaring.web.springboot.filecontrol.MultipartUtil;
 import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
 
