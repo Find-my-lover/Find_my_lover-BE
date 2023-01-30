@@ -1,6 +1,7 @@
-package com.gamjaring.web.springboot.comment;
+package com.gamjaring.web.springboot.dto;
 
 
+import com.gamjaring.web.springboot.domain.Results;
 import com.gamjaring.web.springboot.domain.Member;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,5 +1,7 @@
-package com.gamjaring.web.springboot.comment;
+package com.gamjaring.web.springboot.dto;
 
+
+import com.gamjaring.web.springboot.domain.Comment;
 
 public class CommentResponseDto {
     private Long id;

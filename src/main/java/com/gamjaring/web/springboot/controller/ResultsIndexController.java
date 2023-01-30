@@ -1,4 +1,4 @@
-package com.gamjaring.web.springboot.comment;
+package com.gamjaring.web.springboot.controller;
 
 import com.gamjaring.web.springboot.config.auth.LoginUser;
 import org.springframework.ui.Model;

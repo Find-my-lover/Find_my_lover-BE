@@ -1,5 +1,7 @@
-package com.gamjaring.web.springboot.comment;
+package com.gamjaring.web.springboot.dto;
 
+
+import com.gamjaring.web.springboot.domain.Results;
 
 import java.util.List;
 import java.util.stream.Collectors;

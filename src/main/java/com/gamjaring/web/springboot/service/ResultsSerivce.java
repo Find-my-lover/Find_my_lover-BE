@@ -1,7 +1,10 @@
-package com.gamjaring.web.springboot.comment;
+package com.gamjaring.web.springboot.service;
 
+import com.gamjaring.web.springboot.domain.Results;
+import com.gamjaring.web.springboot.domain.ResultsRepository;
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.domain.UserRepository;
+import com.gamjaring.web.springboot.dto.ResultsRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

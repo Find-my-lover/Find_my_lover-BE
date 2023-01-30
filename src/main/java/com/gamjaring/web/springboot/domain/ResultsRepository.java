@@ -1,4 +1,4 @@
-package com.gamjaring.web.springboot.comment;
+package com.gamjaring.web.springboot.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
