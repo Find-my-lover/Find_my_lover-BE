@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 
 @NoArgsConstructor
@@ -36,6 +37,10 @@ public class Results  {
 
     @Column
     private int clothes_num;
+
+    @OneToMany(mappedBy = "results")
+    @JoinColumn(name = "room_id")
+    private Set<Room> room;
 
 
 }

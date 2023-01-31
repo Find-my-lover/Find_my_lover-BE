@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Set;
 
 
 @Builder
@@ -34,5 +35,9 @@ public class Comment {
     @JoinColumn(name = "room_id")
     private Room room;    //한개의 room에 여러개의 comment
 
+
+    @OneToMany(mappedBy = "comment")
+    @JoinColumn(name = "present_id")
+    private Set<Present> present;
 
 }

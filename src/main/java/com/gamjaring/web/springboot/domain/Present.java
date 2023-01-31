@@ -26,7 +26,7 @@ public class Present {
 
     @ManyToOne
     @JoinColumn(name = "comment_id")
-    private Room room;    //한개의 comment에 여러개의 present
+    private Comment comment;    //한개의 comment에 여러개의 present
 
 
 
