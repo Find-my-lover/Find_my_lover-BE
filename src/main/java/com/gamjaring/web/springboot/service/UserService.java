@@ -2,7 +2,7 @@ package com.gamjaring.web.springboot.service;
 
 import java.util.List;
 
-import com.gamjaring.web.springboot.domain.Gender;
+import com.gamjaring.web.springboot.enumpack.Gender;
 import com.gamjaring.web.springboot.domain.Member;
 
 public interface UserService {
@@ -11,7 +11,7 @@ public interface UserService {
     boolean validationLogin(String name, String password);
 
     void validateDuplicateUser(Member user);
-    public List<Member> getUsers();
-    public Member getUser(String email);
-    public void updateGender(String email, Gender gender);
+    List<Member> getUsers();
+    Member getUser(String email);
+    void updateGender(String email, Gender gender);
 }

@@ -3,7 +3,7 @@ package com.gamjaring.web.springboot.service;
 import com.gamjaring.web.springboot.domain.Results;
 import com.gamjaring.web.springboot.domain.ResultsRepository;
 import com.gamjaring.web.springboot.domain.Member;
-import com.gamjaring.web.springboot.domain.UserRepository;
+import com.gamjaring.web.springboot.domain.MemberRepository;
 import com.gamjaring.web.springboot.dto.ResultsRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,13 +16,13 @@ public class ResultsSerivce {
 
     private final ResultsRepository resultsRepository;
 
-    private final UserRepository userRepository;
+    private final MemberRepository memberRepository;
 
     /* CREATE */
     @Transactional
     public Long save(String email, ResultsRequestDto dto) {
 
-        Member user = userRepository.findByEmail(email);
+        Member user = memberRepository.findByEmail(email);
         dto.setUser(user);
 
         Results results = dto.toEntity();

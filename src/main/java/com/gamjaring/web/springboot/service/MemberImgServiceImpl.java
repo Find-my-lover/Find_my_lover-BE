@@ -1,9 +1,9 @@
 package com.gamjaring.web.springboot.service;
 
-import com.gamjaring.web.springboot.domain.MemberImgRepository;
-import com.gamjaring.web.springboot.domain.UserRepository;
+import com.gamjaring.web.springboot.domain.ImgSetRepository;
+import com.gamjaring.web.springboot.domain.MemberRepository;
 import com.gamjaring.web.springboot.domain.Member;
-import com.gamjaring.web.springboot.domain.MemberImg;
+import com.gamjaring.web.springboot.domain.ImgSet;
 import com.gamjaring.web.springboot.filecontrol.S3FileComponent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,15 +15,15 @@ import javax.transaction.Transactional;
 @Transactional
 public class MemberImgServiceImpl implements MemberImgService {
 
-    private final UserRepository userRepository;
-    private final MemberImgRepository memberImgRepository;
+    private final MemberRepository memberRepository;
+    private final ImgSetRepository imgSetRepository;
 //    private final FileHandler fileHandler;
     private final S3FileComponent s3FileComponent;
 
     @Autowired
-    public MemberImgServiceImpl(UserRepository userRepository, MemberImgRepository memberImgRepository, S3FileComponent s3FileComponent) {
-        this.userRepository = userRepository;
-        this.memberImgRepository = memberImgRepository;
+    public MemberImgServiceImpl(MemberRepository memberRepository, ImgSetRepository imgSetRepository, S3FileComponent s3FileComponent) {
+        this.memberRepository = memberRepository;
+        this.imgSetRepository = imgSetRepository;
         this.s3FileComponent = s3FileComponent;
     }
 
@@ -38,13 +38,13 @@ public class MemberImgServiceImpl implements MemberImgService {
         else{
             String dirName = email; //실제 저장되는 경로가 email 폴더
             String uploadImageUrl = (s3FileComponent.upload(new MultipartFile[] {img}, dirName, "self")).get(0);
-            MemberImg memberImg = MemberImg.builder()
+            ImgSet imgSet = ImgSet.builder()
                     .file_size(img.getSize())
                     .stored_file_path(uploadImageUrl)
                     .original_file_name(img.getOriginalFilename())
                     .build();
-            memberImgRepository.save(memberImg);
-            userRepository.joinMemberToImg(member.getEmail(), memberImg);
+            imgSetRepository.save(imgSet);
+            memberRepository.joinMemberToImg(member.getEmail(), imgSet);
         }
         return member;
     }
