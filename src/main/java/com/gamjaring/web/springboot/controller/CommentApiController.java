@@ -9,16 +9,22 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
-@RequestMapping("/api")
 @RestController
+@RequestMapping("/ringmybell")
 public class CommentApiController {
 
     private final CommentService commentService;
 
     /* CREATE */
-    @PostMapping("/results/{id}/comments")
-    public ResponseEntity commentSave(@PathVariable Long id, @RequestBody CommentRequestDto dto,
+//    @PostMapping("/results/{id}/comments")
+//    public ResponseEntity commentSave(@PathVariable Long id, @RequestBody CommentRequestDto dto,
+//                                      @LoginUser UserSessionDto userSessionDto) {
+//        return ResponseEntity.ok(commentService.commentSave(userSessionDto.getEmail(), id, dto));
+//    }
+    @PostMapping("/friends/comment")
+    public ResponseEntity commentSave(@RequestParam String email,
+                                      @RequestBody CommentRequestDto dto,
                                       @LoginUser UserSessionDto userSessionDto) {
-        return ResponseEntity.ok(commentService.commentSave(userSessionDto.getEmail(), id, dto));
+        return ResponseEntity.ok(commentService.commentSave(userSessionDto.getEmail(), dto));
     }
 }
