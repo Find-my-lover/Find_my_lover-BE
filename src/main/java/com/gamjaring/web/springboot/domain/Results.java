@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,7 +17,6 @@ import java.util.List;
 @Getter
 @Entity
 public class Results  {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "results_id")
@@ -24,14 +25,22 @@ public class Results  {
     //이미지 속성 추가해야함
 
 
-    @ManyToOne(fetch = FetchType.LAZY)  //한개의 user에 여러개의 results
+    @OneToOne //한개의 user에 한개의 results
     @JoinColumn(name = "user_id")
     private Member user;
 
+    @Column
+    private String partner_name;
 
-    @OneToMany(mappedBy = "results", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
-    @OrderBy("id asc") // 코멘트 정렬
-    private List<Comment> comments;
+    @Column
+    private int pose_num;
+
+    @Column
+    private int clothes_num;
+
+    @OneToMany(mappedBy = "results")
+    @JoinColumn(name = "room_id")
+    private Set<Room> room;
 
 
 }

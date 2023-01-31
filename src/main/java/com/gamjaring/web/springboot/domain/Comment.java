@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Set;
 
 
 @Builder
@@ -24,12 +25,19 @@ public class Comment {
     private Long id;
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String content; // 코멘트 내용
+    private String message; // 코멘트 내용 구 content
+
+    @Column
+    private int present_num;    //이미지 번호 선택
 
 
     @ManyToOne
-    @JoinColumn(name = "results_id")
-    private Results results;    //한개의 결과에 여러개의 코멘트
+    @JoinColumn(name = "room_id")
+    private Room room;    //한개의 room에 여러개의 comment
 
+
+    @OneToMany(mappedBy = "comment")
+    @JoinColumn(name = "present_id")
+    private Set<Present> present;
 
 }
