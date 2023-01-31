@@ -1,7 +1,7 @@
 package com.gamjaring.web.springboot.domain;
 
 
-
+import com.gamjaring.web.springboot.enumpack.RoomType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -9,30 +9,28 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Table(name = "comments")
+@Table(name = "room")
 @Entity
-public class Comment {
+public class Room {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "comment_id")
+    @Column(name = "room_id")
     private Long id;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
-    private String message; // 코멘트 내용 구 content
-
     @Column
-    private int present_num;    //이미지 번호 선택
-
+    private RoomType room_type;
 
     @ManyToOne
-    @JoinColumn(name = "room_id")
-    private Room room;    //한개의 room에 여러개의 comment
+    @JoinColumn(name = "results_id")
+    private Results results;    //한개의 results에 여러개의 room
+
+
+
 
 
 }

@@ -1,41 +1,33 @@
 package com.gamjaring.web.springboot.domain;
 
 
+import com.gamjaring.web.springboot.enumpack.PresentType;
+import com.gamjaring.web.springboot.enumpack.RoomType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
-
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Getter
 @Entity
-public class Results  {
+public class Present {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "results_id")
+    @Column(name = "present_id")
     private Long id;
 
-    //이미지 속성 추가해야함
-
-
-    @OneToOne //한개의 user에 한개의 results
-    @JoinColumn(name = "user_id")
-    private Member user;
-
     @Column
-    private String partner_name;
+    private PresentType present_type;
 
-    @Column
-    private int pose_num;
+    @ManyToOne
+    @JoinColumn(name = "comment_id")
+    private Room room;    //한개의 comment에 여러개의 present
 
-    @Column
-    private int clothes_num;
 
 
 }
