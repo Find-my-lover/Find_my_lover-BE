@@ -1,7 +1,6 @@
 package com.gamjaring.web.springboot.controller;
 
 import com.gamjaring.web.springboot.config.auth.LoginUser;
-import com.gamjaring.web.springboot.dto.CommentRequestDto;
 import com.gamjaring.web.springboot.dto.UserSessionDto;
 import com.gamjaring.web.springboot.service.CommentService;
 import lombok.RequiredArgsConstructor;

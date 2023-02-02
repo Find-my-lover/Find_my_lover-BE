@@ -31,9 +31,7 @@ public class Room {
     private Results results;    //한개의 results에 여러개의 room
 
     @OneToMany(mappedBy = "room")
-    private List<Comment> comment;
-
-
+    private List<Present> present;
 
 
 }

@@ -13,15 +13,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class ResultsRequestDto {
-    private Long id;
 
-    private Member user;
+    private Member member;
+    private String partner_name;
+    private int pose_num;
+    private int clothes_num;
+
 
     /* Dto -> Entity */
     public Results toEntity() {
         Results results = Results.builder()
-                .id(id)
-                .user(user)
+                .member(member)
+                .partner_name(partner_name)
+                .pose_num(pose_num)
+                .clothes_num(clothes_num)
                 .build();
         return results;
     }
