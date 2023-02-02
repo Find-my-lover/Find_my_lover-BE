@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
-public class ResultsSerivce {
+public class ResultsSerivceImpl implements ResultsService{
 
     private final ResultsRepository resultsRepository;
 
@@ -27,6 +27,8 @@ public class ResultsSerivce {
 
         Results results = dto.toEntity();
         resultsRepository.save(results);
+
+        // TODO : 파이썬과 통신해서 S3에 관련 사진들 넣기
 
         return results.getId();
     }
