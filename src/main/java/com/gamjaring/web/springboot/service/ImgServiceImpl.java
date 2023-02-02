@@ -13,7 +13,7 @@ import javax.transaction.Transactional;
 
 @Service
 @Transactional
-public class MemberImgServiceImpl implements MemberImgService {
+public class ImgServiceImpl implements ImgService {
 
     private final MemberRepository memberRepository;
     private final ImgSetRepository imgSetRepository;
@@ -21,7 +21,7 @@ public class MemberImgServiceImpl implements MemberImgService {
     private final S3FileComponent s3FileComponent;
 
     @Autowired
-    public MemberImgServiceImpl(MemberRepository memberRepository, ImgSetRepository imgSetRepository, S3FileComponent s3FileComponent) {
+    public ImgServiceImpl(MemberRepository memberRepository, ImgSetRepository imgSetRepository, S3FileComponent s3FileComponent) {
         this.memberRepository = memberRepository;
         this.imgSetRepository = imgSetRepository;
         this.s3FileComponent = s3FileComponent;

@@ -3,7 +3,7 @@ package com.gamjaring.web.springboot.controller;
 import com.gamjaring.web.springboot.enumpack.Gender;
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.filecontrol.S3FileComponent;
-import com.gamjaring.web.springboot.service.MemberImgServiceImpl;
+import com.gamjaring.web.springboot.service.ImgServiceImpl;
 import com.gamjaring.web.springboot.service.UserServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,7 +22,7 @@ import java.io.IOException;
 public class RingMyBellController {
 
     private final UserServiceImpl userServiceImpl;
-    private final MemberImgServiceImpl memberImgServiceImpl;
+    private final ImgServiceImpl memberImgServiceImpl;
     private final S3FileComponent s3FileComponent;
 
 
