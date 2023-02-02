@@ -52,9 +52,9 @@ public class Member {
     @Column(name="my_img", nullable = false)
     private Image image;
 */
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "fk_memberimg")
-    @JsonManagedReference
+//    @OneToMany(cascade = {CascadeType.ALL})
+//    @JoinColumn(name = "member_img")
+//    @JsonManagedReference
     private MemberImg memberImg;
 
     //user Entity를 이렇게 생성

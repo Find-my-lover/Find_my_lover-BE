@@ -29,7 +29,8 @@ public class MemberImg {
 
     private long file_size;
 
-    @OneToOne(mappedBy = "memberImg")
+    @ManyToOne
+    @JoinColumn(name="member")
     @JsonBackReference
     private Member member;
 }
