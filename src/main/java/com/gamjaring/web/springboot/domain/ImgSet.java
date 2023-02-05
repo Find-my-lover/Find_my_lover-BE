@@ -19,9 +19,10 @@ public class ImgSet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "img_id")
-    private Long Id;
+    private Long id;
 
     @NotNull
+    @Enumerated(EnumType.STRING)
     private ImgCase imgCase;
 
     // 원본 파일이름 과 서버에 저장된 파일 경로 를 분리한 이유?

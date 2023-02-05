@@ -5,7 +5,6 @@ import com.gamjaring.web.springboot.enumpack.PresentType;
 import lombok.Builder;
 import lombok.Getter;
 
-@Builder
 @Getter
 public class PresentResponseDto {
     private PresentType present_type;
