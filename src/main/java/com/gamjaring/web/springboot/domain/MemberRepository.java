@@ -15,7 +15,7 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
     @Query("UPDATE Member m SET m.gender=:gender WHERE m.email=:email")
     void updateGender(String email, Gender gender);
 
-    @Modifying(clearAutomatically = true)
-    @Query("UPDATE Member m SET m.memberImg=:memberImg WHERE m.email=:email")
-    void  joinMemberToImg(String email, ImgSet imgSet);
+//    @Modifying(clearAutomatically = true)
+//    @Query("UPDATE Member m SET m.imgSet=:imgSet WHERE m.email=:email")
+//    void  joinMemberToImg(String email, ImgSet imgSet);
 }

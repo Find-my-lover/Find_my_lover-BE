@@ -6,11 +6,7 @@ import com.gamjaring.web.springboot.domain.Results;
 import lombok.Builder;
 import lombok.Getter;
 
-import javax.persistence.Column;
-import java.util.List;
-import java.util.stream.Collectors;
 
-@Builder
 @Getter
 public class ResultsResponseDto {
 
