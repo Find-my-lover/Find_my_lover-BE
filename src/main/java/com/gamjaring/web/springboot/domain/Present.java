@@ -2,7 +2,6 @@ package com.gamjaring.web.springboot.domain;
 
 
 import com.gamjaring.web.springboot.enumpack.PresentType;
-import com.gamjaring.web.springboot.enumpack.RoomType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -24,9 +23,11 @@ public class Present {
     @Column
     private PresentType present_type;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "comment_id")
     private Comment comment;    //한개의 comment에 여러개의 present
+
+    //private String jwapyo;
 
 
 

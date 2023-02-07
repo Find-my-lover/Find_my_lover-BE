@@ -2,8 +2,8 @@
 
 package com.gamjaring.web.springboot.service;
 
-import com.gamjaring.web.springboot.domain.UserRepository;
-import com.gamjaring.web.springboot.domain.Gender;
+import com.gamjaring.web.springboot.domain.MemberRepository;
+import com.gamjaring.web.springboot.enumpack.Gender;
 import com.gamjaring.web.springboot.domain.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -21,18 +21,18 @@ import java.util.List;
 public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Autowired
-    private final UserRepository userRepository;
+    private final MemberRepository memberRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder){
-        this.userRepository=userRepository;
+    public UserServiceImpl(MemberRepository memberRepository, PasswordEncoder passwordEncoder){
+        this.memberRepository = memberRepository;
         this.passwordEncoder=passwordEncoder;
     }
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        Member user=userRepository.findByEmail(email);
+        Member user= memberRepository.findByEmail(email);
 
         if(user==null){
             throw new UsernameNotFoundException(email);
@@ -48,12 +48,12 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public Member createUser(Member user){
         validateDuplicateUser(user);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return userRepository.save(user);
+        return memberRepository.save(user);
     }
 
     @Override
     public boolean validationLogin(String name, String password){
-        Member loginUser=userRepository.findByEmail(name);
+        Member loginUser= memberRepository.findByEmail(name);
 
         if(loginUser==null){
             System.out.println("해당 이메일로 등록된 유저는 없습니다.");
@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     //private이어야 할지 고민해보기
     //중복 이메일로 회원가입 시도하면 예외 발생
     public void validateDuplicateUser(Member user){
-        if(userRepository.findByEmail(user.getEmail())!=null){
+        if(memberRepository.findByEmail(user.getEmail())!=null){
             throw new IllegalStateException("이미 가입된 회원입니다.");
         }
 
@@ -83,17 +83,17 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public List<Member> getUsers(){
-        return userRepository.findAll();
+        return memberRepository.findAll();
     }
 
     @Override
     public Member getUser(String email) {
-        return userRepository.findByEmail(email);
+        return memberRepository.findByEmail(email);
     }
 
     @Override
     public void updateGender(String email, Gender gender) {
-        userRepository.updateGender(email, gender);
+        memberRepository.updateGender(email, gender);
     }
 
 

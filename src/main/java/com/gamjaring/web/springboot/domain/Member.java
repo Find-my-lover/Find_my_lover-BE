@@ -4,14 +4,16 @@
 
 package com.gamjaring.web.springboot.domain;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.gamjaring.web.springboot.dto.UserDto;
+import com.gamjaring.web.springboot.enumpack.Gender;
+import com.gamjaring.web.springboot.enumpack.Role;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import javax.validation.Valid;
+import java.util.List;
 
 //Member gender를 nullable
 @Getter
@@ -45,7 +47,10 @@ public class Member {
     @Column(nullable=false)
     private Role role;
 
+    @OneToMany(mappedBy = "member")
+    private List<ImgSet> imgSets;
 
+<<<<<<< HEAD
 /*
     @OneToMany
     @JoinColumn(name="user_id")
@@ -56,6 +61,10 @@ public class Member {
 //    @JoinColumn(name = "member_img")
 //    @JsonManagedReference
     private MemberImg memberImg;
+=======
+    @OneToOne(mappedBy = "member")
+    private Results results;
+>>>>>>> dd844b6fc35876a10806239c925c44b62d50ea0b
 
     //user Entity를 이렇게 생성
     public static Member createUser(@Valid UserDto userDto, PasswordEncoder passwordEncoder){
@@ -69,27 +78,4 @@ public class Member {
 
         return user;
     }
-//
-//    @Column(nullable = false)
-//    private String gender;
-
-//    @Column
-//    private String picture;
-
-//
-
-
-/*
-    @Builder
-    public User(String name, String password){
-        this.name=name;
-        this.password=password;
-    }
-
-    public User update(String name, String password){
-        this.name=name;
-        this.password=password;
-        return this;
-    }
-*/
 }

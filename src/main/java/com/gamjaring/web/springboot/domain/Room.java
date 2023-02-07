@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 @Builder
 @AllArgsConstructor
@@ -24,15 +24,14 @@ public class Room {
     private Long id;
 
     @Column
-    private RoomType room_type;
+    private RoomType roomType;
 
     @ManyToOne
     @JoinColumn(name = "results_id")
     private Results results;    //한개의 results에 여러개의 room
 
     @OneToMany(mappedBy = "room")
-    @JoinColumn(name = "comment_id")
-    private Set<Comment> comment;
+    private List<Comment> comment;
 
 
 

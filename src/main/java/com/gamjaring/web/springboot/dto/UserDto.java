@@ -2,7 +2,6 @@
 //계층 간의 데이터 교환을 담당하는 객체이다.
 package com.gamjaring.web.springboot.dto;
 
-import com.gamjaring.web.springboot.domain.Role;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.validator.constraints.Length;

@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class CommentRequestDto {
-    private Long id;
     private String message;
     private Room room;
 
@@ -22,7 +21,6 @@ public class CommentRequestDto {
     /* Entity -> Dto*/
     public Comment toEntity() {
         Comment comments = Comment.builder()
-                .id(id)
                 .message(message)
                 .room(room)
                 .build();

@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.List;
 
 
 @Builder
@@ -28,16 +28,13 @@ public class Comment {
     private String message; // 코멘트 내용 구 content
 
     @Column
-    private int present_num;    //이미지 번호 선택
+    private String writer;
 
-
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "room_id")
     private Room room;    //한개의 room에 여러개의 comment
 
-
     @OneToMany(mappedBy = "comment")
-    @JoinColumn(name = "present_id")
-    private Set<Present> present;
+    private List<Present> present;
 
 }

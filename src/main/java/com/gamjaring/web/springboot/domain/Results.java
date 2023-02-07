@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 
 @NoArgsConstructor
@@ -24,10 +23,9 @@ public class Results  {
 
     //이미지 속성 추가해야함
 
-
     @OneToOne //한개의 user에 한개의 results
     @JoinColumn(name = "user_id")
-    private Member user;
+    private Member member;
 
     @Column
     private String partner_name;
@@ -39,8 +37,6 @@ public class Results  {
     private int clothes_num;
 
     @OneToMany(mappedBy = "results")
-    @JoinColumn(name = "room_id")
-    private Set<Room> room;
-
+    private List<Room> room;
 
 }

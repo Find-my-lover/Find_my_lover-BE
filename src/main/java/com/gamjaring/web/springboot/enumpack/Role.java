@@ -1,4 +1,4 @@
-package com.gamjaring.web.springboot.domain;
+package com.gamjaring.web.springboot.enumpack;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

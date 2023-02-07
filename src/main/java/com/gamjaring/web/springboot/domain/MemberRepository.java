@@ -2,12 +2,13 @@
 package com.gamjaring.web.springboot.domain;
 
 
+import com.gamjaring.web.springboot.enumpack.Gender;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 
-public interface UserRepository extends JpaRepository<Member, Long> {
+public interface MemberRepository extends JpaRepository<Member, Long> {
     Member findByEmail(String email);
 
     @Modifying(clearAutomatically=true)
@@ -16,5 +17,5 @@ public interface UserRepository extends JpaRepository<Member, Long> {
 
     @Modifying(clearAutomatically = true)
     @Query("UPDATE Member m SET m.memberImg=:memberImg WHERE m.email=:email")
-    void  joinMemberToImg(String email, MemberImg memberImg);
+    void  joinMemberToImg(String email, ImgSet imgSet);
 }
