@@ -3,9 +3,7 @@ package com.gamjaring.web.springboot.controller;
 import com.gamjaring.web.springboot.enumpack.Gender;
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.filecontrol.S3FileComponent;
-import com.gamjaring.web.springboot.service.ResultsSerivceImpl;
-import com.gamjaring.web.springboot.service.TestServiceImpl;
-import com.gamjaring.web.springboot.service.UserServiceImpl;
+import com.gamjaring.web.springboot.service.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 @Api(tags={"ringmybell"})
@@ -23,10 +22,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class RingMyBellController {
 
-    private final TestServiceImpl testService;
-    private final ResultsSerivceImpl resultsSerivce;
+    private final TestService testService;
+    private final ResultsService resultsService;
     private final S3FileComponent s3FileComponent;
-    private final UserServiceImpl userService;
+    private final UserService userService;
 
 
     @ApiOperation(value = "테스트실행")
@@ -46,29 +45,32 @@ public class RingMyBellController {
 
     @ApiOperation(value = "1차 결과 출력")
     @GetMapping("/recommend")
-    public String recommend(@Valid @RequestParam String email) {
+    public List<String> recommend(@Valid @RequestParam String email) {
         Member member = userService.getUser(email);
-        return testService.getCouplePictureUrl(member); // TODO : 커플 이름 추가해야 함
+        String partnerName = resultsService.getPartnerName(member);
+        String coupleImageUrl = testService.getCouplePictureUrl(member);
+        return Arrays.asList(partnerName, coupleImageUrl);
     }
 
     @ApiOperation(value = "나의 집 화면")
     @GetMapping("/results")
     public List<String> results(@Valid @RequestParam String email) {
         Member member = userService.getUser(email);
-        return resultsSerivce.getResultPictureUrl(member);
+        List<String> resultUrls = resultsService.getResultPictureUrl(member);
+        return resultUrls;
     }
 
     @ApiOperation(value = "사진 생성")
     @GetMapping("/photo")
     public List<String> photo(@Valid @RequestParam String email) {
         Member member = userService.getUser(email);
-        return resultsSerivce.getSelectPhotoListUrl(member); // S3에 사진 18개를 모두 가지고 있어야 함
+        return resultsService.getSelectPhotoListUrl(member); // S3에 사진 18개를 모두 가지고 있어야 함
     }
 
     @ApiOperation(value = "집 화면 커플 사진 커스텀 ")
     @PostMapping("/setcustom")
     public ResponseEntity<?> setPose(@RequestParam int poseNum, @RequestParam int costumeNum) {
-        resultsSerivce.changeCustom(poseNum, costumeNum);
+        resultsService.changeCustom(poseNum, costumeNum);
         return ResponseEntity.ok().build();
     }
 

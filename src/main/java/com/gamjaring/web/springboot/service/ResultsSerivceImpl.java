@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Transactional
 @RequiredArgsConstructor
 @Service
 public class ResultsSerivceImpl implements ResultsService{
@@ -20,7 +20,6 @@ public class ResultsSerivceImpl implements ResultsService{
     private final ImgSetRepository imgSetRepository;
 
     /* CREATE */
-    @Transactional
     public Long save(String email, ResultsRequestDto dto) {
 
         Member user = memberRepository.findByEmail(email);
@@ -54,6 +53,11 @@ public class ResultsSerivceImpl implements ResultsService{
     @Override
     public void changeCustom(int poseNum, int costumeNum) {
         //TODO : 커플 사진이 바뀌어야 하고 그에 따른 FINAL 사진들도 바뀌어야 함
+    }
+
+    @Override
+    public String getPartnerName(Member member) {
+        return resultsRepository.getPartnerNameByMember(member);
     }
 
 
