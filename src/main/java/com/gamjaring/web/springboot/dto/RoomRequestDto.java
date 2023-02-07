@@ -1,9 +1,8 @@
 package com.gamjaring.web.springboot.dto;
 
-
-import com.gamjaring.web.springboot.domain.Comment;
 import com.gamjaring.web.springboot.domain.Results;
 import com.gamjaring.web.springboot.domain.Room;
+import com.gamjaring.web.springboot.enumpack.RoomType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,17 +12,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CommentRequestDto {
-    private String message;
-    private Room room;
+public class RoomRequestDto {
+    private RoomType roomType;
 
-
-    /* Entity -> Dto*/
-    public Comment toEntity() {
-        Comment comments = Comment.builder()
-                .message(message)
-                .room(room)
+    public Room toEntity() {
+        Room room = Room.builder()
+                .roomType(roomType)
                 .build();
-        return comments;
+        return room;
     }
+
+
 }

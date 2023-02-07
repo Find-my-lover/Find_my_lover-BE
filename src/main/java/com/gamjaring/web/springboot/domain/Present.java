@@ -8,13 +8,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Getter
 @Entity
+@Table(name = "present")
 public class Present {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "present_id")
@@ -23,12 +26,14 @@ public class Present {
     @Column
     private PresentType present_type;
 
+    @Column
+    private String writer;
+
+    @Column
+    private String message;
+
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "comment_id")
-    private Comment comment;    //한개의 comment에 여러개의 present
-
-    //private String jwapyo;
-
-
+    @JoinColumn(name = "room_id")
+    private Room room;    //한개의 comment에 여러개의 present
 
 }
