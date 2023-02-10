@@ -36,4 +36,7 @@ public class Present {
     @JoinColumn(name = "room_id")
     private Room room;    //한개의 comment에 여러개의 present
 
+    public void modify(String content) {
+        this.message = message;
+    }
 }
