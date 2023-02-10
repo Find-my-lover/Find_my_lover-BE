@@ -68,8 +68,8 @@ public class RingMyBellController {
     }
 
     @ApiOperation(value = "집 화면 커플 사진 커스텀 ")
-    @PostMapping("/setcustom")
-    public ResponseEntity<?> setPose(@RequestParam int poseNum, @RequestParam int costumeNum) {
+    @PostMapping("/set-custom")
+    public ResponseEntity<?> setCustom(@RequestParam int poseNum, @RequestParam int costumeNum) {
         resultsService.changeCustom(poseNum, costumeNum);
         return ResponseEntity.ok().build();
     }
