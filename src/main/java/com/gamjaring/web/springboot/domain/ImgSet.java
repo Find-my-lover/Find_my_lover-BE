@@ -35,17 +35,11 @@ public class ImgSet {
 
     private long file_size;
 
-<<<<<<< HEAD:src/main/java/com/gamjaring/web/springboot/domain/MemberImg.java
-    @ManyToOne
-    @JoinColumn(name="member")
-    @JsonBackReference
-=======
 //    @OneToOne(mappedBy = "imgSet")
 //    @JsonBackReference
 //    private Member member;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
->>>>>>> dd844b6fc35876a10806239c925c44b62d50ea0b:src/main/java/com/gamjaring/web/springboot/domain/ImgSet.java
     private Member member;
 }

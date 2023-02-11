@@ -50,21 +50,8 @@ public class Member {
     @OneToMany(mappedBy = "member")
     private List<ImgSet> imgSets;
 
-<<<<<<< HEAD
-/*
-    @OneToMany
-    @JoinColumn(name="user_id")
-    @Column(name="my_img", nullable = false)
-    private Image image;
-*/
-//    @OneToMany(cascade = {CascadeType.ALL})
-//    @JoinColumn(name = "member_img")
-//    @JsonManagedReference
-    private MemberImg memberImg;
-=======
     @OneToOne(mappedBy = "member")
     private Results results;
->>>>>>> dd844b6fc35876a10806239c925c44b62d50ea0b
 
     //user Entity를 이렇게 생성
     public static Member createUser(@Valid UserDto userDto, PasswordEncoder passwordEncoder){

@@ -76,6 +76,8 @@ dependencies {
     implementation "io.springfox:springfox-swagger2:2.9.2"
     implementation "io.springfox:springfox-swagger-ui:2.9.2"
     implementation group: 'org.springframework.security', name: 'spring-security-web', version: '5.3.2.RELEASE'
+
+
 //Thanks for using https://jar-download.com
 
     //implementation "org.springdoc:springdoc-openapi-ui:1.6.6"
