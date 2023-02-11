@@ -13,7 +13,7 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 @Service
-public class ResultsSerivceImpl implements ResultsService{
+public class ResultsServiceImpl implements ResultsService{
 
     private final ResultsRepository resultsRepository;
     private final MemberRepository memberRepository;
@@ -57,7 +57,7 @@ public class ResultsSerivceImpl implements ResultsService{
 
     @Override
     public String getPartnerName(Member member) {
-        return resultsRepository.getPartnerNameByMember(member);
+        return resultsRepository.getResultsByMember(member).getPartner_name();
     }
 
 
