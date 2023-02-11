@@ -29,9 +29,9 @@ public class TestServiceImpl implements TestService {
         imgService.addMemberImg(member, file, email);
 
         Results results = Results.builder()
-                .pose_num(1)
-                .clothes_num(1)
-                .partner_name("default")
+                .poseNum(1)
+                .clothesNum(1)
+                .partnerName("default")
                 .build();
 
         resultsRepository.joinMemberToResults(member, results.getId());
@@ -51,7 +51,7 @@ public class TestServiceImpl implements TestService {
 //        return imgSet.getStored_file_path();
 
         // S3에 "couple"+results.getId() 이름의 사진이 있으면 그 url을 응답. TODO : 아니면 예외처리
-        return s3FileComponent.getUrls(member.getEmail(), new ArrayList<>(Arrays.asList("couple"+member.getResults().getId()))).get(0);
+        return s3FileComponent.getUrls(member.getEmail(), new ArrayList<>(Arrays.asList("couple11"+member.getResults().getId()))).get(0);
     }
 
     @Override

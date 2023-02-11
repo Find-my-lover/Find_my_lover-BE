@@ -28,13 +28,13 @@ public class Results  {
     private Member member;
 
     @Column
-    private String partner_name;
+    private String partnerName;
 
     @Column
-    private int pose_num;
+    private int poseNum;
 
     @Column
-    private int clothes_num;
+    private int clothesNum;
 
     @OneToMany(mappedBy = "results")
     private List<Room> room;
