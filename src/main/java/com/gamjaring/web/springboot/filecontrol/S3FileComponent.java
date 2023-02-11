@@ -126,4 +126,14 @@ public class S3FileComponent {
                 return MediaType.APPLICATION_OCTET_STREAM;
         }
     }
+
+    public List<String> getUrls (String dirName, List<String> fileNames) {
+        List<String> urls = new ArrayList<>();
+        for(String fileName : fileNames) {
+            if (amazonS3Client.doesObjectExist(bucket, dirName + "/" + fileName)) {
+                urls.add((amazonS3Client.getUrl(bucket, dirName + "/" + fileName)).toString());
+            }
+        }
+        return urls;
+    }
 }

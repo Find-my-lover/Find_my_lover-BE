@@ -10,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.io.BufferedReader;
@@ -36,14 +35,12 @@ public class RingMyBellController {
 
     @ApiOperation(value = "테스트실행")
     @PostMapping("/test")
-    public ResponseEntity<?> select(@Valid @RequestParam String email,
+    public ResponseEntity<?> test(@Valid @RequestParam String email,
                                     @Valid @RequestParam Gender gender,
                                     @Valid @RequestParam MultipartFile file) throws Exception {
         // TODO : 밑에서 로직 처리하는 부분을 service layer로 옮겨야 한다.
         //email로 사용자를 찾고 gender를 최신화하고 image를 저장한다.
         Member member = userService.getUser(email);
-//        userServiceImpl.updateGender(email, gender);
-//        imgServiceImpl.addMemberImg(member, file, email);
         testService.checkExist(member);
         testService.testLover(email, gender, file);
         return ResponseEntity.ok().build();
@@ -85,7 +82,7 @@ public class RingMyBellController {
             }
             br.close();
 
-            if(sb.toString().contains("ok")){
+            if(sb.contains("ok")){
                 return "api-axios complete";
                 //return resultsService.getSelectPhotoListUrl(member);
             }
@@ -97,6 +94,8 @@ public class RingMyBellController {
        //return resultsService.getSelectPhotoListUrl(member); // S3에 사진 18개를 모두 가지고 있어야 함
         return "errorPage/500";
     }
+
+
 
     @ApiOperation(value = "집 화면 커플 사진 커스텀 ")
     @PostMapping("/set-custom")
