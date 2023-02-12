@@ -34,7 +34,7 @@ public class RingMyBellController {
 
     //User session_user= (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     private final TestService testService;
-    private final ResultsServiceImpl resultsService; // TODO : 인터페이스 주입 시 빈 2개인 오류 발생. 해결해야 함
+    private final ResultsService resultsService;
     private final S3FileComponent s3FileComponent;
     private final UserService userService;
 
