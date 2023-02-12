@@ -64,7 +64,7 @@ public class RingMyBellController {
     @ApiOperation(value = "flask 연결 테스트")
     @PostMapping("/flask")
     public String flaskTest(@RequestParam String message) {
-        String jsonMessage = "{message: " + message + "}";
+        String jsonMessage = "{\"message\":\""+message+"\"}";
         return HttpConn.httpConnPost("http://127.0.0.1:5000/test_result", jsonMessage);
     }
 //    @ApiOperation(value="사용자 사진 정보 flask에 전달")
