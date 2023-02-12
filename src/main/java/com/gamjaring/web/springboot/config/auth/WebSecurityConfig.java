@@ -61,14 +61,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-
     @Override
     public void configure(WebSecurity web) throws Exception {
 
         AntPathRequestMatcher antPathRequestMatcher = new AntPathRequestMatcher("/result");
         AndRequestMatcher andRequestMatcher = new AndRequestMatcher(antPathRequestMatcher);
-
-
         web
                 .ignoring().antMatchers( "/css/**", "/js/**", "/img/**")
                 .antMatchers("/**")
@@ -80,7 +77,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(customUserDetailsService)
         .passwordEncoder(passwordEncoder());
     }
-
-
 
 }

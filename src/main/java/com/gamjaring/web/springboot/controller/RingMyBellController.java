@@ -1,19 +1,28 @@
 package com.gamjaring.web.springboot.controller;
 
+import com.gamjaring.web.springboot.dto.PhotoAPI;
+import com.gamjaring.web.springboot.dto.ResultsPictureListDto;
 import com.gamjaring.web.springboot.enumpack.Gender;
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.filecontrol.S3FileComponent;
-import com.gamjaring.web.springboot.httpconnection.HttpConn;
 import com.gamjaring.web.springboot.service.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
@@ -76,6 +85,7 @@ public class RingMyBellController {
 //            api.email=email;
 //        }
 //        api.test_id=
+]
 //    @ApiOperation(value = "사진 선택 리스트")
 //    @PostMapping("/photo/post")
 //    public List<ResultsPictureListDto> photo(@Valid @RequestParam String email) {

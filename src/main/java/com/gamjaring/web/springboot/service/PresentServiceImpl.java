@@ -5,10 +5,14 @@ import com.gamjaring.web.springboot.domain.MemberRepository;
 import com.gamjaring.web.springboot.domain.Present;
 import com.gamjaring.web.springboot.domain.PresentRepository;
 import com.gamjaring.web.springboot.dto.PresentRequestDto;
+import com.gamjaring.web.springboot.dto.PresentResponseDto;
+import com.gamjaring.web.springboot.dto.ResultsPictureListDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 
 @Transactional
 @Service
@@ -42,7 +46,6 @@ public class PresentServiceImpl implements PresentService {
 
         Present present = validateReply(writer, present_id, member);
         present.modify(request.getMessage());
-        return;
     }
 
     @Transactional
@@ -52,6 +55,14 @@ public class PresentServiceImpl implements PresentService {
                 .orElseThrow(() -> new RuntimeException("선물이 없습니다"));
 
         return present;
+    }
+
+    @Transactional
+    @Override
+    public List<PresentResponseDto> getPresentList(Member member){
+        List<PresentResponseDto> dto = new ArrayList<>();
+
+        return dto;
     }
 
 

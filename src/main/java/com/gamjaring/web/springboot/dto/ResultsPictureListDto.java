@@ -10,4 +10,6 @@ public class ResultsPictureListDto {
     private String url;
     private int pose_num;
     private int clothes_num;
+
+
 }

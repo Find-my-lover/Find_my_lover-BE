@@ -37,11 +37,11 @@ public class ResultsServiceImpl implements ResultsService{
     }
 
     @Override
-    public List<String> getResultsPictureUrl(Member member) {
+    public List<String> getResultsPictureUrl(Member member) {   //내가 해야할 총 사진
         List<String> Urls = new ArrayList<>();
         // TODO : FINAL1 부터 FIANL6 까지 다 해야함
-        ImgSet imgSet = imgSetRepository.findByImgCase(ImgCase.FINAL1);
-        Urls.add(imgSet.getStored_file_path());
+//        ImgSet imgSet = imgSetRepository.findByImgCase(ImgCase.FINAL1);
+//        Urls.add(imgSet.getStored_file_path());
         return Urls;
     }
 
@@ -76,6 +76,8 @@ public class ResultsServiceImpl implements ResultsService{
     public String getPartnerName(Member member) {
         return resultsRepository.getResultsByMember(member).getPartnerName();
     }
+
+
 
 
 }
