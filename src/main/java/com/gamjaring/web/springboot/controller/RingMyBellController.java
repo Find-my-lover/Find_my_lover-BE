@@ -78,8 +78,12 @@ public class RingMyBellController {
 //            api.email=email;
 //        }
 //        api.test_id=
-]
+
 //    @ApiOperation(value = "사진 선택 리스트")
+
+
+
+
 //    @PostMapping("/photo/post")
 //    public List<ResultsPictureListDto> photo(@Valid @RequestParam String email) {
 //
