@@ -78,6 +78,8 @@ public class RingMyBellController {
 
         try{
             HttpURLConnection conn=(HttpURLConnection)new URL(url).openConnection();
+
+
             BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
             String line =null;
             while((line=br.readLine())!=null){
