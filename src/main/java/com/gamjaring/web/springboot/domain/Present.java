@@ -8,7 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,7 +23,7 @@ public class Present {
     private Long id;
 
     @Column
-    private PresentType present_type;
+    private PresentType presentType;
 
     @Column
     private String writer;

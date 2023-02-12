@@ -7,13 +7,13 @@ import lombok.Getter;
 
 @Getter
 public class PresentResponseDto {   //대답해 주는 것
-    private PresentType present_type;
-    private String writer;
-    private String message;
+    private final PresentType present_type;
+    private final String writer;
+    private final String message;
 
     @Builder
     public PresentResponseDto(Present present) {
-        this.present_type= present.getPresent_type();
+        this.present_type= present.getPresentType();
         this.writer = present.getWriter();
         this.message = present.getMessage();
     }

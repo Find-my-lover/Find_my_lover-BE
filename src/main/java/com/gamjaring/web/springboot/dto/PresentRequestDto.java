@@ -20,7 +20,7 @@ public class PresentRequestDto {    //요청으로 부터 정보를 받아 DB에
 
     public Present toEntity() {
         Present present = Present.builder()
-                .present_type(present_type)
+                .presentType(present_type)
                 .writer(writer)
                 .message(message)
                 .build();

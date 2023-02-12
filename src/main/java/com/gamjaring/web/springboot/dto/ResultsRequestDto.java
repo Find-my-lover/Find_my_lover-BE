@@ -24,9 +24,9 @@ public class ResultsRequestDto {
     public Results toEntity() {
         Results results = Results.builder()
                 .member(member)
-                .partner_name(partner_name)
-                .pose_num(pose_num)
-                .clothes_num(clothes_num)
+                .partnerName(partner_name)
+                .poseNum(pose_num)
+                .clothesNum(clothes_num)
                 .build();
         return results;
     }

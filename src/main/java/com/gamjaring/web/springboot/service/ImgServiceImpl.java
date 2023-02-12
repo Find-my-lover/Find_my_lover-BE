@@ -16,7 +16,6 @@ import javax.transaction.Transactional;
 public class ImgServiceImpl implements ImgService {
 
     private final ImgSetRepository imgSetRepository;
-    //    private final FileHandler fileHandler;
     private final S3FileComponent s3FileComponent;
 
     @Autowired
@@ -27,7 +26,6 @@ public class ImgServiceImpl implements ImgService {
 
     @Override
     public Member addMemberImg(Member member, MultipartFile img, String email) throws Exception {
-        //List<MemberImg> list = fileHandler.parseFileInfo(new ArrayList<>(Arrays.asList(img)));
 
         if (img.isEmpty()) {
             // TODO : 파일이 없을 땐 어떻게 해야할까.. 고민을 해보아야 할 것 예외처리 해야함
