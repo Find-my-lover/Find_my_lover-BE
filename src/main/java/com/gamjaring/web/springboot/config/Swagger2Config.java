@@ -21,10 +21,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Swagger2Config{
     //WebSecurityConfig extend없앤 상태
 
-    @Autowired
-    UserService userService;
-
-
     @Bean
     public Docket api(){
         return new Docket(DocumentationType.SWAGGER_2)

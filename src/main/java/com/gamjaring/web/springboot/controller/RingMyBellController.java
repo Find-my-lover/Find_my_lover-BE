@@ -62,6 +62,7 @@ public class RingMyBellController {
         return Arrays.asList(partnerName, coupleImageUrl);
     }
 
+    /*
     @ApiOperation(value = "나의 집 화면")
     @GetMapping("/results")
     public List<String> results(@Valid @RequestParam String email) {
@@ -69,6 +70,8 @@ public class RingMyBellController {
         List<String> resultUrls = resultsService.getResultsPictureUrl(member);
         return resultUrls;
     }
+    */
+
 //    @ApiOperation(value="사용자 사진 정보 flask에 전달")
 //    @GetMapping("/photo/get")
 //    public Object photo_info(){
@@ -78,7 +81,7 @@ public class RingMyBellController {
 //            api.email=email;
 //        }
 //        api.test_id=
-]
+
 //    @ApiOperation(value = "사진 선택 리스트")
 //    @PostMapping("/photo/post")
 //    public List<ResultsPictureListDto> photo(@Valid @RequestParam String email) {

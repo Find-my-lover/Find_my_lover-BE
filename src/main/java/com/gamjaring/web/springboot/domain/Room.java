@@ -33,5 +33,4 @@ public class Room {
     @OneToMany(mappedBy = "room")
     private List<Present> present;
 
-
 }
