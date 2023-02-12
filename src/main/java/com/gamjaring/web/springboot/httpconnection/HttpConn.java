@@ -4,7 +4,6 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 
 public class HttpConn {
 
@@ -24,25 +23,28 @@ public class HttpConn {
             conn.setDoOutput(true);
 
             //Accept-Charset 설정 UTF-8 or ASCII
-            conn.setRequestProperty("Accept-Charset", "UTF-8");
+            conn.setRequestProperty("Content-type", "application/json;utf-8");
+            conn.setRequestProperty("Accept", "application/json");
+//            conn.setRequestProperty("Accept-Charset", "UTF-8");
 //            conn.setRequestProperty("Context_Type", "application/x-www-form-urlencoded;charset=UTF-8");
 
             // POST로 넘겨줄 파라미터 생성.
-            byte[] outputInBytes = message.getBytes(StandardCharsets.UTF_8);
-            OutputStream os = conn.getOutputStream();
-            os.write(outputInBytes);
-            os.close();
+            try(OutputStream os = conn.getOutputStream()) {
+                byte[] input = message.getBytes("utf-8");
+                os.write(input, 0, input.length);
+            }
 
             //결과값을 받아온다.
-            InputStream is = conn.getInputStream();
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
-            String line;
-            StringBuffer response = new StringBuffer();
-            while ((line = br.readLine()) != null) {
-                response.append(line);
-                response.append('\r');
+            try(BufferedReader br = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream(), "utf-8"))) {
+                StringBuilder response = new StringBuilder();
+                String responseLine = null;
+                while ((responseLine = br.readLine()) != null) {
+                    response.append(responseLine.trim());
+                }
+                sb += response.toString();
+                System.out.println(response.toString());
             }
-            br.close();
 
             if(sb.contains("ok")){
                 return "api-axios complete";
