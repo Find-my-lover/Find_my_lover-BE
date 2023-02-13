@@ -65,83 +65,8 @@ public class RingMyBellController {
     @PostMapping("/flask")
     public String flaskTest(@RequestParam String message) {
         String jsonMessage = "{message: " + message + "}";
-        return HttpConn.httpConnPost("http://127.0.0.1:5000/test_result", jsonMessage);
+        return HttpConn.httpConnPost("test_result", jsonMessage);
     }
-//    @ApiOperation(value="사용자 사진 정보 flask에 전달")
-//    @GetMapping("/photo/get")
-//    public Object photo_info(){
-//        PhotoAPI api=new PhotoAPI();
-//        if(session_user instanceof User){
-//            String email=session_user.getUsername();
-//            api.email=email;
-//        }
-//        api.test_id=
-//    @ApiOperation(value = "사진 선택 리스트")
-//    @PostMapping("/photo/post")
-//    public List<ResultsPictureListDto> photo(@Valid @RequestParam String email) {
-//
-//        Member member = userService.getUser(email);
-//
-//        String url="http://127.0.0.1:5000/test_result";
-//        String sb="";
-//
-//        try{
-//            HttpURLConnection conn=(HttpURLConnection)new URL(url).openConnection();
-//
-//
-//            BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
-//            String line =null;
-//            while((line=br.readLine())!=null){
-//                sb=sb+line+'\n';
-//            }
-//            br.close();
-//
-//            if(sb.toString().contains("ok")){
-//                return "api-axios complete";
-//                //return resultsService.getSelectPhotoListUrl(member);
-//            }
-//        }catch(MalformedURLException e){
-//            e.printStackTrace();
-//        }catch(IOException e){
-//            e.printStackTrace();
-//        }
-//       //return resultsService.getSelectPhotoListUrl(member); // S3에 사진 18개를 모두 가지고 있어야 함
-//        return "errorPage/500";
-//
-//        return resultsService.getResultsPictureList(member);
-//
-//    }
-
-//    @ApiOperation(value = "사진 선택 리스트")
-//    @GetMapping("/photo")
-//    public String photo(@Valid @RequestParam String email) {
-//
-//        Member member = userService.getUser(email);
-//
-//        String url="http://127.0.0.1:5000/test_result";
-//        String sb="";
-//
-//        try{
-//            HttpURLConnection conn=(HttpURLConnection)new URL(url).openConnection();
-//            BufferedReader br=new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
-//            String line =null;
-//            while((line=br.readLine())!=null){
-//                sb=sb+line+'\n';
-//            }
-//            br.close();
-//
-//            if(sb.contains("ok")){
-//                return "api-axios complete";
-//                //return resultsService.getSelectPhotoListUrl(member);
-//            }
-//        }catch(MalformedURLException e){
-//            e.printStackTrace();
-//        }catch(IOException e){
-//            e.printStackTrace();
-//        }
-//        //return resultsService.getSelectPhotoListUrl(member); // S3에 사진 18개를 모두 가지고 있어야 함
-//        return "errorPage/500";
-//    }
 
 
 
