@@ -1,5 +1,6 @@
 package com.gamjaring.web.springboot.controller;
 
+import com.gamjaring.web.springboot.httpconnection.HttpConn;
 import com.gamjaring.web.springboot.dto.PhotoAPI;
 import com.gamjaring.web.springboot.dto.ResultsPictureListDto;
 import com.gamjaring.web.springboot.enumpack.Gender;
