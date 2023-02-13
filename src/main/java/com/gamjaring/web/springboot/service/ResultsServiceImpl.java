@@ -77,7 +77,4 @@ public class ResultsServiceImpl implements ResultsService{
         return resultsRepository.getResultsByMember(member).getPartnerName();
     }
 
-
-
-
 }

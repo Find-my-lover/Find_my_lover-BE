@@ -5,6 +5,7 @@ import com.gamjaring.web.springboot.dto.ResultsPictureListDto;
 import com.gamjaring.web.springboot.enumpack.Gender;
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.filecontrol.S3FileComponent;
+import com.gamjaring.web.springboot.httpconnection.HttpConn;
 import com.gamjaring.web.springboot.service.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -62,13 +63,13 @@ public class RingMyBellController {
         return Arrays.asList(partnerName, coupleImageUrl);
     }
 
-    @ApiOperation(value = "나의 집 화면")
-    @GetMapping("/results")
-    public List<String> results(@Valid @RequestParam String email) {
-        Member member = userService.getUser(email);
-        List<String> resultUrls = resultsService.getResultsPictureUrl(member);
-        return resultUrls;
-    }
+//    @ApiOperation(value = "나의 집 화면")
+//    @GetMapping("/results")
+//    public List<String> results(@Valid @RequestParam String email) {
+//        Member member = userService.getUser(email);
+//        List<String> resultUrls = resultsService.getResultsPictureUrl(member);
+//        return resultUrls;
+//    }
 
     @ApiOperation(value = "flask 연결 테스트")
     @PostMapping("/flask")
@@ -85,7 +86,7 @@ public class RingMyBellController {
 //            api.email=email;
 //        }
 //        api.test_id=
-]
+
 //    @ApiOperation(value = "사진 선택 리스트")
 //    @PostMapping("/photo/post")
 //    public List<ResultsPictureListDto> photo(@Valid @RequestParam String email) {
