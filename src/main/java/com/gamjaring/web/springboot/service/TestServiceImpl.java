@@ -38,7 +38,7 @@ public class TestServiceImpl implements TestService {
 
         // flask 서버에 요청 보내기. 응답이 올 때까지 기다릴 수 있으면 기다리고 안된다면 다시 요청받기
         // TODO : 이 때 파트너 이름 받아와야 함
-        return HttpConn.httpConnPost("http://127.0.0.1:5000/test", "test" + results.getId());
+        return HttpConn.httpConnPost("test", "test" + results.getId());
 
     }
 

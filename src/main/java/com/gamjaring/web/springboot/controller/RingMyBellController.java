@@ -5,7 +5,6 @@ import com.gamjaring.web.springboot.dto.ResultsPictureListDto;
 import com.gamjaring.web.springboot.enumpack.Gender;
 import com.gamjaring.web.springboot.domain.Member;
 import com.gamjaring.web.springboot.filecontrol.S3FileComponent;
-import com.gamjaring.web.springboot.httpconnection.HttpConn;
 import com.gamjaring.web.springboot.service.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

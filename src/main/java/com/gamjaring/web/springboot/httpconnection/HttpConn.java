@@ -6,12 +6,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class HttpConn {
+    static String url = "http://127.0.0.1:5000/";
 
-    public static String httpConnPost(String url, String message) {
+    public static String httpConnPost(String endpoint, String message) {
         String sb="";
 
         try{
-            HttpURLConnection conn=(HttpURLConnection)new URL(url).openConnection();
+            HttpURLConnection conn=(HttpURLConnection)new URL(url+endpoint).openConnection();
 
             //불러오는데 시간이 오래 걸리는 경우 Time out 설정
             conn.setReadTimeout(10000);
